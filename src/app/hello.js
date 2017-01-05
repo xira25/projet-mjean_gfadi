@@ -5,4 +5,4 @@ angular
     controller: function () {
       this.hello = 'Hello World! Im a potatoo';
     }
-  });
+});
