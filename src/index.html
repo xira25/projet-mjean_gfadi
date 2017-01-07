@@ -46,7 +46,7 @@
           <div class="form-group">
             <input type="text" class="form-control" placeholder="Search for a recepie">
           </div>
-          <button type="submit" class="btn btn-default">Submit</button>
+          <button type="submit" class="btn btn-default" onclick="window.location.href='/searchresults'">Submit</button>
         </form>
         
         <ul class="nav navbar-nav navbar-right">
@@ -70,33 +70,52 @@
         <div class="col-md-2" id="leftmenu">
             <img class="img-responsive" src="images/LeCookLogo.png"/>
             <div class="header1">
-                <p style="font-size : 18pt; font-weight : bold; color : #191e2d;">The refence cooking site</p>
-                <p>Stuff</p>
-                <p>Stuff</p>
-                <p>Stuff</p>
-                <p>Suggestions</p>
+                <p style="font-size : 11pt; font-weight : bold; color : #191e2d;">The refence cooking site</p>
+                <p>Cooking joke</p>
+                <p class="joke">"Hahahaha verry funny"</p>
+                <p style="text-align: center; text-decoration: underline;">Random</p>
                 <div class="suggestion">
-                    <p>Name<p>
                     <img class="img-responsive" src="images/delhi-food-2.jpg"/>
-                    <p>Preparation time</p>
-                    <p>Rating : *****</p>
+                    <div class="recContent">
+                      <p style="font-weight: bold;">Name<p>
+                      <p>&#8986 Preparation time : </p>
+                      <p>Rating : *****</p>
+                    </div>
                 </div>
 
                 <div class="suggestion">
-                    <p>Name<p>
                     <img class="img-responsive" src="images/delhi-food-2.jpg"/>
-                    <p>Preparation time</p>
-                    <p>Rating : *****</p>
+                    <div class="recContent">
+                      <p style="font-weight: bold;">Name<p>
+                      <p>&#8986 Preparation time : </p>
+                      <p>Rating : *****</p>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="col-md-10">
+
+      <!-- API Request 
+        <script>
+        var unirest = var unirest = require('unirest');
+        unirest.get("https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/food/jokes/random")
+        .header("X-Mashape-Key", "4PTOBxUqKhmshG0KYCigfNqnZySvp1U6PpGjsnmmcY6n4o12Kp")
+        .header("Accept", "application/json")
+        .end(function (result) {
+          console.log(result.status, result.headers, result.body);
+        });
+        </script>
+      -->
         <ui-view></ui-view>
        
         </div>
       </div>
     </div>
-
+    <div id="footer">
+          <div class="container">
+            <p>leCook - Projet Web - He-Arc</p>
+          </div>
+    </div>
 
 
 

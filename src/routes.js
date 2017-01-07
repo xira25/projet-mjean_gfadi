@@ -30,10 +30,17 @@ function routesConfig($stateProvider, $urlRouterProvider, $locationProvider) {
       url: '/myfridge',
       component: 'myfridge'
     });
-    
+
   $stateProvider
     .state('advancedsearch', {
       url: '/advancedsearch',
       component: 'advancedsearch'
     });
+
+  $stateProvider
+    .state('searchresults', {
+      url: '/searchresults',
+      component: 'searchresults'
+    });
 }
+

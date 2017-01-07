@@ -127,19 +127,57 @@ body,html{
     font-size: 75px;
   }
 
-#leftmenu{
-  border-right-style: solid;
-  border-color : cornflowerblue;
-}
+
 
 .suggestion{
-  border-style: dashed;
-  padding : 10px;
+  border-style: solid;
   margin-top: 5px;
   margin-bottom: 5px;
+  border-color: #39869b;
+  background-color: #a4a9f4;
 }
 
 li{
   font-size: 12px;
 }
  
+.title2{
+  border-style: solid;
+  text-align : center;
+  border-color: #39869b;
+  padding : 10px;
+  font-weight: bold;
+  color : #39869b;
+}
+
+.title3{
+  text-decoration: underline;
+}
+
+#footer{
+  background-color: white;
+}
+
+.recommandationLayer{
+  background-color: #a4a9f4;
+  border-style: solid;
+  border-color: #39869b;
+}
+
+body{
+  background-color: lightgrey;
+}
+
+.recContent{
+  padding : 10px;
+}
+
+.joke{
+  font-style: italic;
+}
+
+.homeTitle{
+   font-family: "Arial Black", Times, serif;
+   font-weight: bold;
+   text-align: center;
+}
