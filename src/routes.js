@@ -12,4 +12,28 @@ function routesConfig($stateProvider, $urlRouterProvider, $locationProvider) {
       url: '/',
       component: 'app'
     });
+
+  $stateProvider
+    .state('home', {
+      url: '/home',
+      component: 'home'
+    });
+
+  $stateProvider
+    .state('recommandations', {
+      url: '/recommandations',
+      component: 'recommandations'
+    });
+
+  $stateProvider
+    .state('myfridge', {
+      url: '/myfridge',
+      component: 'myfridge'
+    });
+    
+  $stateProvider
+    .state('advancedsearch', {
+      url: '/advancedsearch',
+      component: 'advancedsearch'
+    });
 }

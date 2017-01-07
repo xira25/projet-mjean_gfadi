@@ -1,14 +1,14 @@
-describe('myComponent component', function () {
+describe('myfridge component', function () {
   beforeEach(module('app', function ($provide) {
-    $provide.factory('myComponent', function () {
+    $provide.factory('myfridge', function () {
       return {
-        templateUrl: 'app/myComponent.html'
+        templateUrl: 'app/myfridge.html'
       };
     });
   }));
 
   it('should...', angular.mock.inject(function ($rootScope, $compile) {
-    var element = $compile('<myComponent></myComponent>')($rootScope);
+    var element = $compile('<myfridge></myfridge>')($rootScope);
     $rootScope.$digest();
     expect(element).not.toBeNull();
   }));
