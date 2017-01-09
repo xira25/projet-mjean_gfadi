@@ -1,5 +1,12 @@
-function homeController() {
-  this.text = 'My brand new component - Home!';
+function homeController($scope, DataExtract) {
+  this.text = 'My brand new component! - REc';
+  var $ctrl = this;
+
+  DataExtract.getRandomRecipe().then(function (randomRecipe) {
+    $ctrl.randomRecipe = randomRecipe.data;
+    $ctrl.randomRecipeName = randomRecipe.data.recipes.title;
+    $ctrl.randomRecipeImage = randomRecipe.data.recipes.image;
+  });
 }
 
 angular
