@@ -57,7 +57,7 @@ body,html{
       float: none;
       width: auto;
       margin-top: 0;
-      background-color: transparent;
+      background-color: cyan;
       border: 0;
       -webkit-box-shadow: none;
       box-shadow: none;
@@ -148,6 +148,7 @@ li{
   padding : 10px;
   font-weight: bold;
   color : #39869b;
+  border-radius: 25px;
 }
 
 .title3{
@@ -172,6 +173,13 @@ body{
   padding : 10px;
 }
 
+.jokeLayer{
+  background-color: burlywood;
+  padding : 10px;
+  border-style: solid;
+  border-color: saddlebrown;
+}
+
 .joke{
   font-style: italic;
 }
@@ -181,3 +189,4 @@ body{
    font-weight: bold;
    text-align: center;
 }
+

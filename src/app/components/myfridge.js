@@ -1,5 +1,5 @@
 function myfridgeController() {
-  this.text = 'My brand new component! - my Fridge';
+  this.text = 'My brand new component!';
 }
 
 angular
