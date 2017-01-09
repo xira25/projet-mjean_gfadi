@@ -57,7 +57,7 @@ body,html{
       float: none;
       width: auto;
       margin-top: 0;
-      background-color: transparent;
+      background-color: cyan;
       border: 0;
       -webkit-box-shadow: none;
       box-shadow: none;
@@ -128,4 +128,65 @@ body,html{
   }
 
 
+
+.suggestion{
+  border-style: solid;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border-color: #39869b;
+  background-color: #a4a9f4;
+}
+
+li{
+  font-size: 12px;
+}
  
+.title2{
+  border-style: solid;
+  text-align : center;
+  border-color: #39869b;
+  padding : 10px;
+  font-weight: bold;
+  color : #39869b;
+  border-radius: 25px;
+}
+
+.title3{
+  text-decoration: underline;
+}
+
+#footer{
+  background-color: white;
+}
+
+.recommandationLayer{
+  background-color: #a4a9f4;
+  border-style: solid;
+  border-color: #39869b;
+}
+
+body{
+  background-color: lightgrey;
+}
+
+.recContent{
+  padding : 10px;
+}
+
+.jokeLayer{
+  background-color: burlywood;
+  padding : 10px;
+  border-style: solid;
+  border-color: saddlebrown;
+}
+
+.joke{
+  font-style: italic;
+}
+
+.homeTitle{
+   font-family: "Arial Black", Times, serif;
+   font-weight: bold;
+   text-align: center;
+}
+

@@ -1,0 +1,143 @@
+<!doctype html>
+<html>
+  <head>
+    <base href="/">
+    <meta charset="utf-8">
+    <title>LeCook</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="icon" type="image/png" href="images/faviconLeCook.png" />
+  
+    <!-- build:css({.tmp,src}) styles/vendor.css -->
+    <!-- bower:css -->
+    <!-- run `gulp inject` to automatically populate bower styles dependencies -->
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css({.tmp,src}) styles/app.css -->
+    <!-- inject:css -->
+    <!-- css files will be automatically insert here -->
+    <!-- endinject -->
+    <!-- endbuild -->
+  </head>
+
+  <body ng-app="app">
+    <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="home">Home</a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li><a href="/myfridge">My fridge <span class="sr-only"></span></a></li>
+          <li><a href="/recommandations">Recommandations</a></li>
+          <li><a href="/advancedsearch">Advanced search</a></li>
+        </ul>
+        <form class="navbar-form navbar-left">
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Search for a recepie">
+          </div>
+          <button type="submit" class="btn btn-default" onclick="window.location.href='/searchresults'">Submit</button>
+        </form>
+        
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">User information <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Disconnect</a></li>
+              <li><a href="#">My history</a></li>
+              <li><a href="#">Something else here</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">Separated link</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+
+  <div class="container-fluid">
+    <div class="row" id="row1">
+        <div class="col-md-2" id="leftmenu">
+            <img class="img-responsive" src="images/LeCookLogo.png"/>
+            <div class="header1">
+                <p style="font-size : 11pt; font-weight : bold; color : #191e2d;">The refence cooking site</p>
+                <div class="jokeLayer">
+                  <p style="font-weight: bold;">Cooking joke</p>
+                  <p class="joke">{{ "Lolilol" }}</p>
+                </div>
+                <br />
+                <p style="text-align: center; text-decoration: underline;">Random recipes</p>
+                
+                <div class="suggestion">
+                    <img class="img-responsive" src="images/delhi-food-2.jpg"/>
+                    <div class="recContent">
+                      <p style="font-weight: bold;">Name<p>
+                      <p>&#8986 Preparation time : </p>
+                      <p>Rating : *****</p>
+                    </div>
+                </div>
+
+                <div class="suggestion">
+                    <img class="img-responsive" src="images/delhi-food-2.jpg"/>
+                    <div class="recContent">
+                      <p style="font-weight: bold;">Name<p>
+                      <p>&#8986 Preparation time : </p>
+                      <p>Rating : *****</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-10">
+
+      <!-- API Request 
+        <script>
+        var unirest = var unirest = require('unirest');
+        unirest.get("https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/food/jokes/random")
+        .header("X-Mashape-Key", "4PTOBxUqKhmshG0KYCigfNqnZySvp1U6PpGjsnmmcY6n4o12Kp")
+        .header("Accept", "application/json")
+        .end(function (result) {
+          console.log(result.status, result.headers, result.body);
+        });
+        </script>
+      -->
+        <ui-view></ui-view>
+       
+        </div>
+      </div>
+    </div>
+    <div id="footer">
+          <div class="container">
+            <p>leCook - Projet Web - He-Arc</p>
+          </div>
+    </div>
+
+
+
+  </body>
+
+  <!-- build:js({.tmp,src}) scripts/vendor.js -->
+  <!-- bower:js -->
+  <!-- run `gulp inject` to automatically populate bower script dependencies -->
+  <!-- endbower -->
+  <!-- endbuild -->
+
+  <!-- build:js({.tmp,src}) scripts/app.js -->
+  <!-- inject:js -->
+  <!-- js files will be automatically insert here -->
+  <!-- endinject -->
+  <!-- inject:partials -->
+  <!-- angular templates will be automatically converted in js and inserted here -->
+  <!-- endinject -->
+  <!-- endbuild -->
+</html>
+
