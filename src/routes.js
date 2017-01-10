@@ -11,10 +11,7 @@ function routesConfig($stateProvider, $urlRouterProvider, $locationProvider) {
     .state('app', {
       url: '/',
       component: 'home'
-<<<<<<< HEAD
       // default ==> component: 'app'
-=======
->>>>>>> 70b3a063f30a8c82532a116b4757e0dacb61873f
     });
 
   $stateProvider
@@ -46,5 +43,16 @@ function routesConfig($stateProvider, $urlRouterProvider, $locationProvider) {
       url: '/searchresults',
       component: 'searchresults'
     });
-}
 
+  $stateProvider
+    .state('recipeInformation', {
+      url: '/recipeInformation',
+      component: 'recipeInformation'
+    });
+
+  $stateProvider
+    .state('searchField', {
+      url: '/searchField',
+      component: 'searchField'
+    });
+}

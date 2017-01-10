@@ -6,7 +6,7 @@
         <img class="img-responsive" src="{{$ctrl.randomRecipeImage}}" href="/recipeInformation"/>
       </div>
       <div class="col-md-4" id="moreInfo">
-        <h3 ng-click="$ctrl.sendId({{randomRecipeId}})"> <a href="recipeInformation">{{$ctrl.randomRecipeName}} </a> </h3>
+        <h3 > <a href="recipeInformation">{{$ctrl.randomRecipeName}} </a> </h3>
         <p>About : </p>
         <ul>
           <div ng-if="$ctrl.randomRecipeVegetarian==true">
@@ -47,7 +47,7 @@
     <h3 class="title3">Instructions</h3>
     <p>{{$ctrl.randomRecipeInstructions}}</p>
     <div>
-      <p ng-model="recipeId">{{randomRecipeId}}</p>
+      <p ng-model="recipeId">{{$ctrl.randomRecipeId}}</p>
     </div>
     <!-- hide id style="text-indent:100%; white-space:nowrap; overflow:hidden;"-->
   </div>
