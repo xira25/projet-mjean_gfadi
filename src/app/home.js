@@ -13,10 +13,11 @@ function homeController($scope, $location, DataExtract) {
     $ctrl.randomRecipeServings = randomRecipe.data.recipes[0].servings;
     $ctrl.randomRecipeVegetarian = randomRecipe.data.recipes[0].vegetarian;
     $ctrl.randomRecipeVegan = randomRecipe.data.recipes[0].vegan;
+    $ctrl.randomRecipeGlutenFree = randomRecipe.data.recipes[0].glutenFree;
+    $ctrl.randomRecipeCheap = randomRecipe.data.recipes[0].cheap;
   });
 
   $ctrl.sendId = function (id) {
-    //alert(id);
     $scope.id = id;
   };
 
