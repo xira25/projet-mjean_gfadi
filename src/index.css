@@ -1,5 +1,5 @@
 body {
-  background-color: lightgrey;
+  background-image: url('images/kitchen-background.jpg');
 }
 
 body,html{
@@ -130,10 +130,10 @@ body,html{
 
 
 .suggestion{
-
   margin-top: 5px;
   margin-bottom: 5px;
-  background-color: #a4a9f4;
+  background: rgb(164, 169, 244);
+  background: rgba(164, 169, 244, 0.4);
 }
 
 li{
@@ -142,7 +142,6 @@ li{
  
 .title2{
   text-align : center;
-  background-color: #a4a9f4;
   padding : 10px;
   font-weight: bold;
 }
@@ -156,9 +155,8 @@ li{
 }
 
 .recommandationLayer{
-  background-color: #a4a9f4;
-  border-style: solid;
-  border-color: #39869b;
+  background-color: #cbe6ef;
+  max-height: 200px;
 }
 
 body{
@@ -187,5 +185,8 @@ body{
 }
 
 #moreInfo{
-  background-color: #a4a9f4;
+}
+
+.recContentText{
+  white-space: nowrap; overflow: hidden;
 }

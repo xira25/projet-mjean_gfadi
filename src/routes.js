@@ -42,5 +42,11 @@ function routesConfig($stateProvider, $urlRouterProvider, $locationProvider) {
       url: '/searchresults',
       component: 'searchresults'
     });
+
+  $stateProvider
+    .state('searchField', {
+      url: '/searchField',
+      component: 'searchField'
+    });
 }
 

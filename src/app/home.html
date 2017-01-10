@@ -1,9 +1,12 @@
 <div class = "container-fluid">
   <div class="receipe prez">
     <div class="row">
-      <h2 class="title2">&#9755 Recipe &#9754</h2>
       <div class="col-md-8">
-      <img class="img-responsive" src="{{$ctrl.randomRecipeImage}}"/>
+      <br />
+      <img class="img-responsive" style="margin:0 auto; max-width: 100%; max-height: 400px; border-radius: 15px;" src="{{$ctrl.randomRecipeImage}}"/>
+      <h3 class="title3">Instructions</h3>
+      <p>{{$ctrl.randomRecipeInstructions}}</p>
+
       </div>
       <div class="col-md-4" id="moreInfo">
         <h3>{{$ctrl.randomRecipeName}}</h3>
@@ -24,15 +27,18 @@
             <div ng-if="$ctrl.randomRecipeGlutenFree==true">
               <li>Gluten-free : &#10003 </li>
             </div>
-            <div ng-if="$ctrl.randomRecipeVegan==false">
+            <div ng-if="$ctrl.randomRecipeGlutenFree==false">
               <li>Gluten-free : 	&#10060 </li>
             </div>
-
-            <li>Glute-free : </li>
-            <li>Cheap : </li>
-            <li>Servings : {{$ctrl.randomRecipeServings}} p</li>
-            <li>Cooking time : {{$ctrl.randomRecipeCookingTime}} min</li>
-            <li>Preparation time : {{$ctrl.randomRecipePreparationTime}} min</li>
+            <div ng-if="$ctrl.randomRecipeCheap==true">
+              <li>Cheap : &#10003 </li>
+            </div>
+            <div ng-if="$ctrl.randomRecipeCheap==false">
+              <li>Cheap : 	&#10060 </li>
+            </div>
+            <li>Servings (portions) : {{$ctrl.randomRecipeServings}}</li>
+            <li>Cooking time (min) : {{$ctrl.randomRecipeCookingTime}}</li>
+            <li>Preparation time (min) : {{$ctrl.randomRecipePreparationTime}}</li>
             <li>Likes : {{$ctrl.randomRecipeLikes}}</li>
           </ul>
           <h3 class="title3">Ingredients<h3>
@@ -43,9 +49,6 @@
             </ul>
       </div>
     </div>
-      <h3 class="title3">Instructions</h3>
-      <p>{{$ctrl.randomRecipeInstructions}}</p>
-      <p>{{ $ctrl.randomRecipeId}}</p>
   </div>
 
 </div>
