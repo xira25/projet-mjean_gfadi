@@ -1,5 +1,10 @@
-function searchFieldController() {
-  this.text = 'My brand new component! - Search Field';
+function searchFieldController($scope, $location, DataExtract) {
+  this.text = 'My brand new component! - REc';
+  var $ctrl = this;
+
+  DataExtract.autoCompleteRecipe($scope).then(function (autoRecipe) {
+    $ctrl.CompleteRecipeList = autoRecipe;
+  });
 }
 
 angular

@@ -1,0 +1,55 @@
+<div class="container-fluid">
+  <div class="receipe prez">
+    <div class="row">
+      <h2 class="title2">&#9755 Recipe &#9754</h2>
+      <div class="col-md-8">
+        <img class="img-responsive" src="{{$ctrl.randomRecipeImage}}" href="/recipeInformation"/>
+      </div>
+      <div class="col-md-4" id="moreInfo">
+        <h3 > <a href="recipeInformation">{{$ctrl.randomRecipeName}} </a> </h3>
+        <p>About : </p>
+        <ul>
+          <div ng-if="$ctrl.randomRecipeVegetarian==true">
+            <li>Vegetarian : &#10003 </li>
+          </div>
+          <div ng-if="$ctrl.randomRecipeVegetarian==false">
+            <li>Vegetarian : &#10060 </li>
+          </div>
+          <div ng-if="$ctrl.randomRecipeVegan==true">
+            <li>Vegan : &#10003 </li>
+          </div>
+          <div ng-if="$ctrl.randomRecipeVegan==false">
+            <li>Vegan : &#10060 </li>
+          </div>
+          <div ng-if="$ctrl.randomRecipeGlutenFree==true">
+            <li>Gluten-free : &#10003 </li>
+          </div>
+          <div ng-if="$ctrl.randomRecipeVegan==false">
+            <li>Gluten-free : &#10060 </li>
+          </div>
+
+          <li>Glute-free : </li>
+          <li>Cheap : </li>
+          <li>Servings : {{$ctrl.randomRecipeServings}} p</li>
+          <li>Cooking time : {{$ctrl.randomRecipeCookingTime}} min</li>
+          <li>Preparation time : {{$ctrl.randomRecipePreparationTime}} min</li>
+          <li>Likes : {{$ctrl.randomRecipeLikes}}</li>
+        </ul>
+        <h3 class="title3">Ingredients
+          <h3>
+            <ul class="ingrlist">
+              <div ng-repeat="ingredient in $ctrl.randomRecipeIngredients">
+                <li>{{ingredient.originalString}}</li>
+              </div>
+            </ul>
+      </div>
+    </div>
+    <h3 class="title3">Instructions</h3>
+    <p>{{$ctrl.randomRecipeInstructions}}</p>
+    <div>
+      <p ng-model="recipeId">{{$ctrl.randomRecipeId}}</p>
+    </div>
+    <!-- hide id style="text-indent:100%; white-space:nowrap; overflow:hidden;"-->
+  </div>
+
+</div>

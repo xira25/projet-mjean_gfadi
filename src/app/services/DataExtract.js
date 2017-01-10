@@ -27,7 +27,6 @@ function DataExtract($http) {
     });
   };
 
-
   $ctrl.getRandomRecipe = function getRandomRecipe() {
     return $http({
       method: 'GET',
@@ -49,12 +48,29 @@ function DataExtract($http) {
       return 'Erreur lors du call';
     });
   };
+
+  $ctrl.getRecipeById = function getRecipeById($scope) {
+    return $http({
+      method: 'GET',
+      url: 'https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/' + $scope.recipeById + '/information?mashape-key=4PTOBxUqKhmshG0KYCigfNqnZySvp1U6PpGjsnmmcY6n4o12Kp'
+    }).then(function successCallback(response) {
+      return response;
+    }, function errorCallback() {
+      return 'Erreur lors du call';
+    });
+  };
+
+  $ctrl.autoCompleteRecipe = function getRautoCompleteRecipeecipeById($scope) {
+    return $http({
+      method: 'GET',
+      url: 'https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/autocomplete?number=12&query=' + $scope.search + '&mashape-key=4PTOBxUqKhmshG0KYCigfNqnZySvp1U6PpGjsnmmcY6n4o12Kp'
+    }).then(function successCallback(response) {
+      return response;
+    }, function errorCallback() {
+      return 'Erreur lors du call';
+    });
+  };
 }
-
-
-
-
-
 
 DataExtract.prototype.getData = function () {
   return 1 + 2;
