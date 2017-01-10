@@ -49,10 +49,10 @@ function DataExtract($http) {
     });
   };
 
-  $ctrl.getRecipeById = function getRecipeById($scope) {
+  $ctrl.getRecipeById = function getRecipeById(id) {
     return $http({
       method: 'GET',
-      url: 'https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/' + $scope.recipeById + '/information?mashape-key=4PTOBxUqKhmshG0KYCigfNqnZySvp1U6PpGjsnmmcY6n4o12Kp'
+      url: 'https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/' + id + '/information?mashape-key=4PTOBxUqKhmshG0KYCigfNqnZySvp1U6PpGjsnmmcY6n4o12Kp'
     }).then(function successCallback(response) {
       return response;
     }, function errorCallback() {
