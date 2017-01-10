@@ -2,7 +2,7 @@
 
 <div class="row">
   <br />
-  <div class="col-md-3" ng-repeat="n in $ctrl.randomRecipes">
+  <div class="col-md-3" ng-repeat="n in $ctrl.randomRecipes | filter:n.aggregateLikes">
     <div class="suggestion">
       <img class="img-responsive" style="width: 250px; height: 200px;"src="{{n.image}}" />
       <div class="recContent">
