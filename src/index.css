@@ -130,10 +130,9 @@ body,html{
 
 
 .suggestion{
-  border-style: solid;
+
   margin-top: 5px;
   margin-bottom: 5px;
-  border-color: #39869b;
   background-color: #a4a9f4;
 }
 
@@ -142,13 +141,10 @@ li{
 }
  
 .title2{
-  border-style: solid;
   text-align : center;
-  border-color: #39869b;
+  background-color: #a4a9f4;
   padding : 10px;
   font-weight: bold;
-  color : #39869b;
-  border-radius: 25px;
 }
 
 .title3{
@@ -176,8 +172,8 @@ body{
 .jokeLayer{
   background-color: burlywood;
   padding : 10px;
-  border-style: solid;
-  border-color: saddlebrown;
+  border-radius: 15px;
+
 }
 
 .joke{
@@ -190,3 +186,6 @@ body{
    text-align: center;
 }
 
+#moreInfo{
+  background-color: #a4a9f4;
+}

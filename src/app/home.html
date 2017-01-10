@@ -1,20 +1,51 @@
+<div class = "container-fluid">
+  <div class="receipe prez">
+    <div class="row">
+      <h2 class="title2">&#9755 Recipe &#9754</h2>
+      <div class="col-md-8">
+      <img class="img-responsive" src="{{$ctrl.randomRecipeImage}}"/>
+      </div>
+      <div class="col-md-4" id="moreInfo">
+        <h3>{{$ctrl.randomRecipeName}}</h3>
+        <p>About : </p>
+          <ul>
+            <div ng-if="$ctrl.randomRecipeVegetarian==true">
+              <li>Vegetarian : &#10003 </li>
+            </div>
+            <div ng-if="$ctrl.randomRecipeVegetarian==false">
+              <li>Vegetarian : 	&#10060 </li>
+            </div>
+            <div ng-if="$ctrl.randomRecipeVegan==true">
+              <li>Vegan : &#10003 </li>
+            </div>
+            <div ng-if="$ctrl.randomRecipeVegan==false">
+              <li>Vegan : 	&#10060 </li>
+            </div>
+            <div ng-if="$ctrl.randomRecipeGlutenFree==true">
+              <li>Gluten-free : &#10003 </li>
+            </div>
+            <div ng-if="$ctrl.randomRecipeVegan==false">
+              <li>Gluten-free : 	&#10060 </li>
+            </div>
 
-<!--Home-->
-<h1 class="homeTitle"> &#127968 Welcome to our homepage! 	&#127968</h1>
+            <li>Glute-free : </li>
+            <li>Cheap : </li>
+            <li>Servings : {{$ctrl.randomRecipeServings}} p</li>
+            <li>Cooking time : {{$ctrl.randomRecipeCookingTime}} min</li>
+            <li>Preparation time : {{$ctrl.randomRecipePreparationTime}} min</li>
+            <li>Likes : {{$ctrl.randomRecipeLikes}}</li>
+          </ul>
+          <h3 class="title3">Ingredients<h3>
+            <ul class="ingrlist">
+              <div ng-repeat="ingredient in $ctrl.randomRecipeIngredients">
+                <li>{{ingredient.originalString}}</li>
+              </div>
+            </ul>
+      </div>
+    </div>
+      <h3 class="title3">Instructions</h3>
+      <p>{{$ctrl.randomRecipeInstructions}}</p>
+      <p>{{ $ctrl.randomRecipeId}}</p>
+  </div>
 
-<div class="receipe prez">
-  <h2 class="title2">&#9755 Recipe of the day &#9754</h2>
-  <h3>Recipe name</h3>
-  <img class="img-responsive" src="images/delhi-food-2.jpg"/>
-  <h3 class="title3">Ingrédients<h3>
-    <ul class="ingrlist">
-      <li>Quantity of Ingr 1</li>
-      <li>hhahaha</li>
-    </ul>
-    <h3 class="title3">Recipe</h3>
-    <p>Text</p>
-</div>
-
-<div class="component">
-  <h2>{{$ctrl.text}}</h2>
 </div>
