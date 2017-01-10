@@ -1,0 +1,27 @@
+<img class="img-responsive" src="images/LeCookLogo.png" />
+<div class="header1">
+  <p style="font-size : 11pt; font-weight : bold; color : #191e2d;">The refence cooking site</p>
+<div class="jokeLayer">
+  <p style="font-weight: bold;">Food joke</p>
+<p class="joke">"{{ $ctrl.joke }}"</p>
+</div>
+<br />
+<p style="text-align: center; text-decoration: underline;">Random recipes</p>
+
+<div class="suggestion">
+  <img class="img-responsive" src="{{$ctrl.randomRecipeImage}}" />
+  <div class="recContent">
+    <a href="selectedRecipe" alt="Go to full description" style="font-weight: bold;"><p>{{$ctrl.randomRecipeName}}</p></a> <!--Link is to be done, we can use the recipe ID to display it on another page-->
+    <p>&#8986 Preparation time : {{$ctrl.randomRecipeCookingTime}}min </p>
+    <p>&#8986 Cooking time : {{$ctrl.randomRecipePreparationTime}}min</p>
+    <p>Likes : {{$ctrl.randomRecipeLikes}} &#128077</p>
+  </div>
+  </div>
+
+  <div class="suggestion">
+    <img class="img-responsive" src="images/delhi-food-2.jpg" />
+    <div class="recContent">
+      <p style="font-weight: bold;">Name<p>
+      <p>&#8986 Preparation time : </p>
+      <p>Rating : *****</p>
+    </div>

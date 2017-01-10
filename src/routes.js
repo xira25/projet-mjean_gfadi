@@ -11,7 +11,10 @@ function routesConfig($stateProvider, $urlRouterProvider, $locationProvider) {
     .state('app', {
       url: '/',
       component: 'home'
+<<<<<<< HEAD
       // default ==> component: 'app'
+=======
+>>>>>>> 70b3a063f30a8c82532a116b4757e0dacb61873f
     });
 
   $stateProvider
