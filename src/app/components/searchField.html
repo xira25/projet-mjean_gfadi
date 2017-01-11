@@ -5,6 +5,7 @@
     <datalist id="RecipeQuery">
 
       <div ng-repeat="r in $ctrl.CompleteRecipeList">
+        <!-- [0] pour obtenir la première recette (la plus cohérente en général) -->
         <a href="recipeInformation?id={{$ctrl.CompleteRecipeList[0].id}}" />
         <option value="{{r.title}}">
         </a>
