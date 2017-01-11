@@ -1,4 +1,4 @@
-function searchFieldController($timeout, DataExtract, $scope, $location) {
+function searchFieldController($timeout, DataExtract, $scope) {
   var $ctrl = this;
 
   $ctrl.getRecipesQuery = function () {
