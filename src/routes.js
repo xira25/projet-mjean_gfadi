@@ -46,7 +46,7 @@ function routesConfig($stateProvider, $urlRouterProvider, $locationProvider) {
 
   $stateProvider
     .state('recipeInformation', {
-      url: '/recipeInformation',
+      url: '/recipeInformation?id',
       component: 'recipeInformation'
     });
 

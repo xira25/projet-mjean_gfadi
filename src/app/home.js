@@ -17,10 +17,6 @@ function homeController($scope, $location, DataExtract) {
     $ctrl.randomRecipeCheap = randomRecipe.data.recipes[0].cheap;
   });
 
-  $ctrl.sendId = function (id) {
-    $scope.id = id;
-  };
-
   $scope.changeView = function (view) {
     $location.path(view); // path not hash
   };

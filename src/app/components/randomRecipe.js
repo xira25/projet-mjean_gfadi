@@ -1,5 +1,8 @@
 function randomRecipeController($scope, DataExtract) {
   var $ctrl = this;
+
+  //Similaire à recipeInformation, cepepdant on ne récupère pas un élément mais une liste, dans le cas présent nous ne récupérons qu'un seul élément
+  // c'est pourquoi le [0] est en dur.
   DataExtract.getRandomRecipe().then(function (randomRecipe) {
     $ctrl.randomRecipeName = randomRecipe.data.recipes[0].title;
     $ctrl.randomRecipeImage = randomRecipe.data.recipes[0].image;

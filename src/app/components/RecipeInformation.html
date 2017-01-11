@@ -1,55 +1,67 @@
 <div class="container-fluid">
   <div class="receipe prez">
     <div class="row">
-      <h2 class="title2">&#9755 Recipe &#9754</h2>
       <div class="col-md-8">
-        <img class="img-responsive" src="{{$ctrl.randomRecipeImage}}" href="/recipeInformation"/>
+        
+      <br />
+      <!-- source url récupérer et afficher depuis un des attributs de la recette  -->
+      <img class="img-responsive" style="margin:0 auto; max-width: 100%; max-height: 400px; border-radius: 15px;" src="{{$ctrl.recipeByIdImage}}">
+      </img>
+
       </div>
       <div class="col-md-4" id="moreInfo">
-        <h3 > <a href="recipeInformation">{{$ctrl.randomRecipeName}} </a> </h3>
+        <h3> {{$ctrl.recipeByIdName}} </a> </h3>
         <p>About : </p>
-        <ul>
-          <div ng-if="$ctrl.randomRecipeVegetarian==true">
-            <li>Vegetarian : &#10003 </li>
-          </div>
-          <div ng-if="$ctrl.randomRecipeVegetarian==false">
-            <li>Vegetarian : &#10060 </li>
-          </div>
-          <div ng-if="$ctrl.randomRecipeVegan==true">
-            <li>Vegan : &#10003 </li>
-          </div>
-          <div ng-if="$ctrl.randomRecipeVegan==false">
-            <li>Vegan : &#10060 </li>
-          </div>
-          <div ng-if="$ctrl.randomRecipeGlutenFree==true">
-            <li>Gluten-free : &#10003 </li>
-          </div>
-          <div ng-if="$ctrl.randomRecipeVegan==false">
-            <li>Gluten-free : &#10060 </li>
-          </div>
 
-          <li>Glute-free : </li>
-          <li>Cheap : </li>
-          <li>Servings : {{$ctrl.randomRecipeServings}} p</li>
-          <li>Cooking time : {{$ctrl.randomRecipeCookingTime}} min</li>
-          <li>Preparation time : {{$ctrl.randomRecipePreparationTime}} min</li>
-          <li>Likes : {{$ctrl.randomRecipeLikes}}</li>
-        </ul>
-        <h3 class="title3">Ingredients
-          <h3>
+          <ul>
+             <!-- Série de condition pour ne pas avoir a afficher un simple true/false mais la coche ou la croix pour le confort de l'utilisateur' -->
+            <div ng-if="$ctrl.recipeByIdVegetarian==true">
+              <li>Vegetarian : &#10003 </li>
+            </div>
+            <div ng-if="$ctrl.recipeByIdVegetarian==false">
+              <li>Vegetarian : 	&#10060 </li>
+            </div>
+            <div ng-if="$ctrl.recipeByIdVegan==true">
+              <li>Vegan : &#10003 </li>
+            </div>
+            <div ng-if="$ctrl.recipeByIdVegan==false">
+              <li>Vegan : 	&#10060 </li>
+            </div>
+            <div ng-if="$ctrl.recipeByIdGlutenFree==true">
+              <li>Gluten-free : &#10003 </li>
+            </div>
+            <div ng-if="$ctrl.recipeByIdGlutenFree==false">
+              <li>Gluten-free : 	&#10060 </li>
+            </div>
+            <div ng-if="$ctrl.recipeByIdCheap==true">
+              <li>Cheap : &#10003 </li>
+            </div>
+            <div ng-if="$ctrl.recipeByIdCheap==false">
+              <li>Cheap : 	&#10060 </li>
+            </div>
+            <!-- Attributs autre que boolean mais récupérer de la même manière-->
+            <li>Servings (portions) : {{$ctrl.recipeByIdServings}}</li>
+            <li>Cooking time (min) : {{$$ctrl.recipeByIdCookingTime}}</li>
+            <li>Preparation time (min) : {{$ctrl.recipeByIdPreparationTime}}</li>
+            <li>Likes : {{$ctrl.recipeByIdLikes}}</li>
+          </ul>
+
+          <h3 class="title3">Ingredients<h3>
             <ul class="ingrlist">
-              <div ng-repeat="ingredient in $ctrl.randomRecipeIngredients">
+              <!-- Liste des ingrédients récupérer depuis un attribut "Array" de la recette (permet la directive ng-repeat) -->
+              <div ng-repeat="ingredient in $ctrl.recipeByIdIngredients">
                 <li>{{ingredient.originalString}}</li>
               </div>
             </ul>
       </div>
     </div>
+
     <h3 class="title3">Instructions</h3>
-    <p>{{$ctrl.randomRecipeInstructions}}</p>
+    <!-- Récupération d'une simple chaine. perspectives d'amélioration: mise en place d'une balise <br/> après chaque points.-->
+    <p>{{$ctrl.recipeByIdInstructions}}</p>
     <div>
-      <p ng-model="recipeId">{{$ctrl.randomRecipeId}}</p>
     </div>
-    <!-- hide id style="text-indent:100%; white-space:nowrap; overflow:hidden;"-->
+    <!-- hide id style="text-indent:100%; white-space:nowrap; overflow:hidden;" in <p ng-model="recipeId">{{randomRecipeId}}</p>-->
   </div>
 
 </div>
