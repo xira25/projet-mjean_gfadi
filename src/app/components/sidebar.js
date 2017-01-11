@@ -2,14 +2,17 @@ function sidebarController($scope, DataExtract) {
   this.text = 'My brand new component! - REc';
   var $ctrl = this;
 
+ // Pour récupérer une blague concernant la nourriture
   DataExtract.getJoke().then(function (joke) {
     $ctrl.joke = joke;
   });
 
+  // Pour récupérer une information concernant la nourriture (similaire à getJoke)
   DataExtract.getFoodTrivia().then(function (foodTrivia) {
     $ctrl.foodTrivia = foodTrivia;
   });
 
+  // Pour récupérer des recettes aléatoires.
   DataExtract.getRandomRecipe().then(function (randomRecipe) {
     $ctrl.randomRecipes = randomRecipe.data.recipes;
     $ctrl.randomRecipeName = randomRecipe.data.recipes[0].title;

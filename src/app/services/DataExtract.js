@@ -1,6 +1,9 @@
+// Ce Service englobe les requêtes de type GET envers la food API.
 function DataExtract($http) {
   var $ctrl = this;
 
+/*
+  // Récupérer une blague concernant la nourriture
   $ctrl.getJoke = function getJoke() {
     return $http({
       method: 'GET',
@@ -13,7 +16,11 @@ function DataExtract($http) {
       return 'Erreur lors du call';
     });
   };
+*/
 
+
+/*
+  // Récupérer une information concernant la nourriture.
   $ctrl.getFoodTrivia = function getFoodTrivia() {
     return $http({
       method: 'GET',
@@ -26,7 +33,10 @@ function DataExtract($http) {
       return 'Erreur lors du call';
     });
   };
+*/
 
+/*
+  // permet de récupérer une recette aléatoire
   $ctrl.getRandomRecipe = function getRandomRecipe() {
     return $http({
       method: 'GET',
@@ -37,7 +47,10 @@ function DataExtract($http) {
       return 'Erreur lors du call';
     });
   };
+*/
 
+/*
+  // Permet de récupérer 12 recettes aléatoires. (Seul le paramètre à changer, créer pour limiter le nombre d'appel à l'API)
   $ctrl.getTwelveRandomRecipe = function getTwelveRandomRecipe() {
     return $http({
       method: 'GET',
@@ -48,7 +61,10 @@ function DataExtract($http) {
       return 'Erreur lors du call';
     });
   };
+*/
 
+/*
+  // Permet de récupérer une recette avec uniquement l'ID comme paramètre (très pratique)
   $ctrl.getRecipeById = function getRecipeById(id) {
     return $http({
       method: 'GET',
@@ -59,7 +75,9 @@ function DataExtract($http) {
       return 'Erreur lors du call';
     });
   };
+*/
 
+// En cours
   $ctrl.autoCompleteRecipe = function getRautoCompleteRecipeecipeById($scope) {
     return $http({
       method: 'GET',

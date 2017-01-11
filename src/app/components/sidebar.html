@@ -1,6 +1,9 @@
 <img class="img-responsive" src="images/LeCookLogo.png" />
 
+
 <p style="font-size : 11pt; font-weight : bold; color : #191e2d;">The refence cooking site</p>
+
+<!-- Pour le confort de l'utilisateur, on demande au service DataExtract une blague-->
 <div class="jokeLayer">
   <p style="font-weight: bold;">Food joke</p>
   <p class="joke">"{{ $ctrl.joke }}"</p>
@@ -8,6 +11,7 @@
 
 <br />
 
+<!-- Pour le confort de l'utilisateur, on demande au service DataExtract une information-->
 <div class="jokeLayer">
   <p style="font-weight: bold;">Food Fact</p>
   <p class="joke">"{{ $ctrl.foodTrivia }}"</p>
@@ -15,6 +19,7 @@
 
 <br />
 
+<!-- Pour afficher des recettes dans la sidebar, ici href redirige l'utilisateur vers les détails de la recette -->
 <div ng-repeat="n in $ctrl.randomRecipes">
   <div class="suggestion">
     <img class="img-responsive" src="{{n.image}}" />
