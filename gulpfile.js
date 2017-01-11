@@ -2,6 +2,15 @@ const gulp = require('gulp');
 const HubRegistry = require('gulp-hub');
 const browserSync = require('browser-sync');
 
+var deploy = require('gulp-deploy-git');
+gulp.task('deploy', function () {
+  return gulp.src('**/*', {read: false, cwd: 'dist'})
+    .pipe(deploy({
+      repository: 'git@github.com:heg-web/projet-mjean_gfadi.git',
+      remoteBranch: 'gh-pages'
+    }));
+});
+
 const conf = require('./conf/gulp.conf');
 
 // Load some files into the registry
@@ -24,25 +33,16 @@ function reloadBrowserSync(cb) {
   cb();
 }
 
-var deploy = require('gulp-deploy-git');
-gulp.task('deploy', function () {
-  return gulp.src('**/*', '**/*/*', {read: false, cwd: 'dist'})
-    .pipe(deploy({
-      repository: 'git@github.com:heg-web/projet-mjean_gfadi.git',
-      remoteBranch: 'gh-pages'
-    }));
-});
-
 function watch(done) {
   gulp.watch([
     conf.path.src('index.html'),
     'bower.json'
   ], gulp.parallel('inject'));
 
-  gulp.watch(conf.path.src('app/**/*.html'), gulp.series('partials', reloadBrowserSync));
+  gulp.watch(conf.path.src('app/**/*.html', 'app/*.html'), gulp.series('partials', reloadBrowserSync));
   gulp.watch([
     conf.path.src('index.css')
   ], gulp.series('styles'));
-  gulp.watch(conf.path.src('**/*.js', '**.js', '**/*/*.js'), gulp.series('inject'));
+  gulp.watch(conf.path.src('app/*/*.js', 'app/*.js', 'src/*.js'), gulp.series('inject'));
   done();
 }
