@@ -1,5 +1,4 @@
 function recipeInformationController($scope, $location, DataExtract, $stateParams) {
-  this.text = 'My brand new component! - REc';
   var $ctrl = this;
 
   // Lien entre la valeur retourné par le service DataExtract et ce que l'on va afficher dans la vue.

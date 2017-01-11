@@ -10,8 +10,8 @@
 
       </div>
       <div class="col-md-4" id="moreInfo">
-        <h3> {{$ctrl.recipeByIdName}} </a> </h3>
-        <p>About : </p>
+        <h2> {{$ctrl.recipeByIdName}} </a> </h2>
+        <h3>About : </h3>
 
           <ul>
              <!-- Série de condition pour ne pas avoir a afficher un simple true/false mais la coche ou la croix pour le confort de l'utilisateur' -->
@@ -46,8 +46,8 @@
             <li>Likes : {{$ctrl.recipeByIdLikes}}</li>
           </ul>
 
-          <h3 class="title3">Ingredients<h3>
-            <ul class="ingrlist">
+          <h3>Ingredients<h3>
+            <ul>
               <!-- Liste des ingrédients récupérer depuis un attribut "Array" de la recette (permet la directive ng-repeat) -->
               <div ng-repeat="ingredient in $ctrl.recipeByIdIngredients">
                 <li>{{ingredient.originalString}}</li>
@@ -56,10 +56,10 @@
       </div>
     </div>
 
-    <h3 class="title3">Instructions</h3>
-    <!-- Récupération d'une simple chaine. perspectives d'amélioration: mise en place d'une balise <br/> après chaque points.-->
-    <p>{{$ctrl.recipeByIdInstructions}}</p>
-    <div>
+    <h3>Instructions</h3>
+    <!-- Récupération d'une simple chaine. perspectives d'amélioration: mise en place d'une balise <br/> après chaque points.--> 
+    <div class="instructions">
+      {{$ctrl.recipeByIdInstructions}}
     </div>
     <!-- hide id style="text-indent:100%; white-space:nowrap; overflow:hidden;" in <p ng-model="recipeId">{{randomRecipeId}}</p>-->
   </div>

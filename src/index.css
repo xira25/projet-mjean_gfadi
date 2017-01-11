@@ -6,6 +6,10 @@ body,html{
     height: 100%;
   }
 
+/*
+  Navbar
+*/
+
   nav.sidebar, .main{
     -webkit-transition: margin 200ms ease-out;
       -moz-transition: margin 200ms ease-out;
@@ -120,36 +124,25 @@ body,html{
   section{
     padding-left: 15px;
   }
-  
-  .title{
-    color : #a3391f;
-    text-align: center;
-    font-size: 75px;
-  }
 
-
-
+/*
+  suggestion class is in content : 
+    - sidebar.html
+    - recommandations.html
+*/
 .suggestion{
   margin-top: 5px;
   margin-bottom: 5px;
   background: rgb(164, 169, 244);
   background: rgba(164, 169, 244, 0.4);
+  font-size: 10pt;
 }
 
 li{
-  font-size: 12px;
+  font-size: 10pt;
+  font-family: "Kalinga", Georgia, Serif;
 }
  
-.title2{
-  text-align : center;
-  padding : 10px;
-  font-weight: bold;
-}
-
-.title3{
-  text-decoration: underline;
-}
-
 #footer{
   background-color: white;
 }
@@ -171,22 +164,58 @@ body{
   background-color: burlywood;
   padding : 10px;
   border-radius: 15px;
-
 }
 
 .joke{
   font-style: italic;
 }
 
-.homeTitle{
-   font-family: "Arial Black", Times, serif;
-   font-weight: bold;
-   text-align: center;
-}
-
-#moreInfo{
+#HomeTitle{
+   height : 100%;
+   width : 100%;
 }
 
 .recContentText{
   white-space: nowrap; overflow: hidden;
+}
+
+#homeImg{
+  border-radius: 15px;
+}
+
+.homeTextContent{
+  margin-top: 5px;
+  margin-bottom: 5px;
+  background: rgb(164, 169, 244);
+  background: rgba(164, 169, 244, 0.4);
+  padding : 10px;
+}
+
+.instructions{
+  background: rgb(164, 169, 244);
+  background: rgba(164, 169, 244, 0.4);
+  padding : 10px;
+}
+
+h1{
+  font-family: "Britannic Bold", Georgia, Serif;
+  font-weight: bold;
+}
+
+h2{
+  font-family: "Britannic Bold", Georgia, Serif;
+  font-weight: bold;
+}
+
+h3{
+  font-family: "Britannic Bold", Georgia, Serif;
+}
+
+p {
+    font-family: "Kalinga", Georgia, Serif;
+}
+
+.recommandationTitle{
+  font-family: "Kalinga", Georgia, Serif;
+  text-align: center;
 }
