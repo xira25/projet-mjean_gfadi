@@ -1,5 +1,4 @@
 function sidebarController($scope, DataExtract) {
-  this.text = 'My brand new component! - REc';
   var $ctrl = this;
 
  // Pour récupérer une blague concernant la nourriture

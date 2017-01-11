@@ -1,10 +1,15 @@
 <form class="navbar-form navbar-left">
   <div class="form-group">
-    <input type="text" class="form-control" placeholder="Search for a recipe" list="RecipeQuery">
+    <input ng-model-options="{ debounce: 800 }" ng-model="recipe" type="text" class="form-control" placeholder="Search for a recipe"
+      list="RecipeQuery">
     <datalist id="RecipeQuery">
-      <div ng-repeat="r in $ctrl.getSearchResult()"
-      <option value="">
+
+      <div ng-repeat="r in $ctrl.CompleteRecipeList">
+        <a href="recipeInformation?id={{$ctrl.CompleteRecipeList[0].id}}" />
+        <option value="{{r.title}}">
+        </a>
+      </div>
+
     </datalist>
-  </div>
-  <button type="submit" class="btn btn-default" onclick="window.location.href='/searchresults'">Submit</button>
+    <button type="submit" class="btn btn-default">Submit</button>
 </form>

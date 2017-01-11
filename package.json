@@ -93,5 +93,8 @@
     "test": "gulp test",
     "test:auto": "gulp test:auto",
     "bower": "bower"
+  },
+  "dependencies": {
+    "bootswatch": "^3.3.7"
   }
 }

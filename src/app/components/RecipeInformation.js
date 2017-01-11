@@ -17,6 +17,7 @@ function recipeInformationController($scope, $location, DataExtract, $stateParam
     $ctrl.recipeByIdGlutenFree = recipeById.data.glutenFree;
     $ctrl.recipeByIdCheap = recipeById.data.cheap;
     $ctrl.recipeByIdInstructions = recipeById.data.instructions;
+    $ctrl.recipeByIdId = recipeById.data.id;
   });
 }
 
