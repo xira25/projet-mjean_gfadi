@@ -26,7 +26,7 @@ function reloadBrowserSync(cb) {
 
 var deploy = require('gulp-deploy-git');
 gulp.task('deploy', function () {
-  return gulp.src('**/*/*', { read: false, cwd: 'dist' })
+  return gulp.src('**/*', { read: false, cwd: 'dist' })
     .pipe(deploy({
       repository: 'git@github.com:heg-web/projet-mjean_gfadi.git',
       remoteBranch: 'gh-pages'
@@ -41,7 +41,7 @@ function watch(done) {
 
   gulp.watch(conf.path.src('app/**/*.html'), gulp.series('partials', reloadBrowserSync));
   gulp.watch([
-    conf.path.src('**/*.css')
+    conf.path.src('*.css')
   ], gulp.series('styles'));
   gulp.watch(conf.path.src('**/*.js'), gulp.series('inject'));
   done();
