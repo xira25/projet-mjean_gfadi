@@ -226,3 +226,10 @@ p {
   max-height: 400px; 
   border-radius: 15px;
 }
+
+.moreInfo{
+  background: rgb(164, 169, 244);
+  background: rgba(164, 169, 244, 0.4);
+  font-family: "Kalinga", Georgia, Serif;
+  padding: 5px;
+}

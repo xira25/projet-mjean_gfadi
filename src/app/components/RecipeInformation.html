@@ -11,59 +11,62 @@
           <!-- source url récupérer et afficher depuis un des attributs de la recette  -->
           <img class="img-responsive" id="imgRecipeInfo" src="{{$ctrl.recipeByIdImage}}"/>
         </div>
-        <div class="col-md-4" id="moreInfo">
+        <div class="col-md-4">
           <h2>{{$ctrl.recipeByIdName}}</h2>
           <h3>About : </h3>
-          <ul>
-            <!-- Série de condition pour ne pas avoir a afficher un simple true/false mais la coche ou la croix pour le confort de l'utilisateur' -->
-            <div ng-if="$ctrl.recipeByIdVegetarian==true">
-              <li>Vegetarian : &#10003 </li>
-            </div>
-            <div ng-if="$ctrl.recipeByIdVegetarian==false">
-              <li>Vegetarian : &#10060 </li>
-            </div>
-            <div ng-if="$ctrl.recipeByIdVegan==true">
-              <li>Vegan : &#10003 </li>
-            </div>
-            <div ng-if="$ctrl.recipeByIdVegan==false">
-              <li>Vegan : &#10060 </li>
-            </div>
-            <div ng-if="$ctrl.recipeByIdGlutenFree==true">
-              <li>Gluten-free : &#10003 </li>
-            </div>
-            <div ng-if="$ctrl.recipeByIdGlutenFree==false">
-              <li>Gluten-free : &#10060 </li>
-            </div>
-            <div ng-if="$ctrl.recipeByIdCheap==true">
-              <li>Cheap : &#10003 </li>
-            </div>
-            <div ng-if="$ctrl.recipeByIdCheap==false">
-              <li>Cheap : &#10060 </li>
-            </div>
-            <!-- Attributs autre que boolean mais récupérer de la même manière-->
-            <li>Servings (portions) : {{$ctrl.recipeByIdServings}}</li>
-            <div ng-if="$ctrl.recipeByIdCookingTime===undefined">
-              <li>Cooking time : -</li>
-            </div>
-            <div ng-if="$ctrl.recipeByIdCookingTime!==undefined">
-              <li>Cooking time : {{$ctrl.recipeByIdCookingTime}}min</li>
-            </div>
-            <div ng-if="$ctrl.recipeByIdPreparationTime===undefined">
-              <li>Preparation time : -</li>
-            </div>
-            <div ng-if="$ctrl.recipeByIdPreparationTime!==undefined">
-              <li>Preparation time : {{$$ctrl.recipeByIdPreparationTime}}min</li>
-            </div>
-          </ul>
-
-          <h3 class="title3">Ingredients
-            <h3>
-              <ul class="ingrlist">
-                <!-- Liste des ingrédients récupérer depuis un attribut "Array" de la recette (permet la directive ng-repeat) -->
-                <div ng-repeat="ingredient in $ctrl.recipeByIdIngredients">
-                  <li>{{ingredient.originalString}}</li>
-                </div>
-              </ul>
+          <div class="moreInfo">
+            <ul>
+              <!-- Série de condition pour ne pas avoir a afficher un simple true/false mais la coche ou la croix pour le confort de l'utilisateur' -->
+              <div ng-if="$ctrl.recipeByIdVegetarian==true">
+                <li>Vegetarian : &#10003 </li>
+              </div>
+              <div ng-if="$ctrl.recipeByIdVegetarian==false">
+                <li>Vegetarian : &#10060 </li>
+              </div>
+              <div ng-if="$ctrl.recipeByIdVegan==true">
+                <li>Vegan : &#10003 </li>
+              </div>
+              <div ng-if="$ctrl.recipeByIdVegan==false">
+                <li>Vegan : &#10060 </li>
+              </div>
+              <div ng-if="$ctrl.recipeByIdGlutenFree==true">
+                <li>Gluten-free : &#10003 </li>
+              </div>
+              <div ng-if="$ctrl.recipeByIdGlutenFree==false">
+                <li>Gluten-free : &#10060 </li>
+              </div>
+              <div ng-if="$ctrl.recipeByIdCheap==true">
+                <li>Cheap : &#10003 </li>
+              </div>
+              <div ng-if="$ctrl.recipeByIdCheap==false">
+                <li>Cheap : &#10060 </li>
+              </div>
+              <!-- Attributs autre que boolean mais récupérer de la même manière-->
+              <li>Servings (portions) : {{$ctrl.recipeByIdServings}}</li>
+              <div ng-if="$ctrl.recipeByIdCookingTime===undefined">
+                <li>Cooking time : -</li>
+              </div>
+              <div ng-if="$ctrl.recipeByIdCookingTime!==undefined">
+                <li>Cooking time : {{$ctrl.recipeByIdCookingTime}}min</li>
+              </div>
+              <div ng-if="$ctrl.recipeByIdPreparationTime===undefined">
+                <li>Preparation time : -</li>
+              </div>
+              <div ng-if="$ctrl.recipeByIdPreparationTime!==undefined">
+                <li>Preparation time : {{$$ctrl.recipeByIdPreparationTime}}min</li>
+              </div>
+            </ul>
+          </div>
+        
+          <h3 class="title3">Ingredients<h3>
+          <div class="moreInfo">
+            <ul class="ingrlist">
+              <!-- Liste des ingrédients récupérer depuis un attribut "Array" de la recette (permet la directive ng-repeat) -->
+              <div ng-repeat="ingredient in $ctrl.recipeByIdIngredients">
+                <li>{{ingredient.originalString}}</li>
+              </div>
+            </ul>
+          </div>
         </div>
       </div>
       <h3 class="title3">Instructions</h3>
