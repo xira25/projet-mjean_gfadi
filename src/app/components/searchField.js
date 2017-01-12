@@ -6,6 +6,7 @@ function searchFieldController($timeout, DataExtract, $scope) {
       $ctrl.text = $scope.search;
       $ctrl.CompleteRecipeList = autoRecipe.data;
       $ctrl.id = autoRecipe.data.id;
+      $ctrl.name = autoRecipe.data.name;
     });
   };
 

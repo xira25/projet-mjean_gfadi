@@ -66,11 +66,35 @@ function DataExtract($http) {
     });
   };
 
-// En cours
+  // liste de recette dépendant de la recherche (limit 10)
   $ctrl.getRecipeListWithQuery = function getRecipeListWithQuery(searchQuery) {
     return $http({
       method: 'GET',
       url: 'https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/autocomplete?number=10&query=' + searchQuery + '&mashape-key=4PTOBxUqKhmshG0KYCigfNqnZySvp1U6PpGjsnmmcY6n4o12Kp'
+    }).then(function successCallback(response) {
+      return response;
+    }, function errorCallback() {
+      return 'Erreur lors du call';
+    });
+  };
+
+  // Récupérer les ingrédients existant dans l'API pour faciliter la recherche de recettes correspondantes plus tard
+  $ctrl.getIngredientQuery = function getIngredientQuery(searchQuery) {
+    return $http({
+      method: 'GET',
+      url: 'https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/food/ingredients/autocomplete?metaInformation=true&number=10&query=' + searchQuery + '&mashape-key=4PTOBxUqKhmshG0KYCigfNqnZySvp1U6PpGjsnmmcY6n4o12Kp'
+    }).then(function successCallback(response) {
+      return response;
+    }, function errorCallback() {
+      return 'Erreur lors du call';
+    });
+  };
+
+  // liste de recettes par rapport aux ingrédients dans le frigo
+  $ctrl.getRecipeByIngredient = function getRecipeByIngredient(searchQuery) {
+    return $http({
+      method: 'GET',
+      url: 'https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/search?number=10&offset=0&query=' + searchQuery + '&mashape-key=4PTOBxUqKhmshG0KYCigfNqnZySvp1U6PpGjsnmmcY6n4o12Kp'
     }).then(function successCallback(response) {
       return response;
     }, function errorCallback() {

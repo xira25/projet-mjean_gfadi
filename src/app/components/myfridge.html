@@ -1,6 +1,16 @@
 <h2 class="title2">&#10054 My Fridge &#10054</h2>
+<h2> {{$ctrl.text}} </h2>
+<!-- Barre de recherche dédié aux ingrédients -->
 
-<div class="component">
-  <h2>{{$ctrl.text;}}</h2>
-</div>
+<form class="navbar-form navbar-left">
+  <div class="form-group">
+    <input ng-model-options="{ debounce: 800 }" ng-model="search" type="text" class="form-control" placeholder="Search for an ingredient"
+      list="IngredientQuery">
+    <datalist id="IngredientQuery">
+      <div ng-repeat="r in $ctrl.IngredientList">
+        <option value="{{r.name}}">
+      </div>
+    </datalist>
 
+    <button type="submit" class="btn btn-default">search</button>
+</form>
