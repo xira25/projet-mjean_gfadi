@@ -24,6 +24,7 @@
   <div class="suggestion">
     <img class="img-responsive" src="{{n.image}}" />
     <div class="recContent">
+      <!-- version local ng-href="/recipeInformation?id={{n.id}}" -->
       <a ng-href="/projet-mjean_gfadi/#!/recipeInformation?id={{n.id}}" alt="Go to full description" style="font-weight: bold; font-size: 10pt;"><p>{{n.title}}</p></a>
       <div ng-if="n.cookingMinutes===undefined">
         <p>&#8986 Cooking time : -</p>

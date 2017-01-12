@@ -6,7 +6,8 @@
 
       <div ng-repeat="r in $ctrl.CompleteRecipeList">
         <!-- [0] pour obtenir la première recette (la plus cohérente en général) -->
-        <a ng-href="recipeInformation?id={{$ctrl.CompleteRecipeList[0].id}}" />
+        <!-- version local ng-href="recipeInformation?id={{$ctrl.CompleteRecipeList[0].id}}" -->
+        <a ng-href="/projet-mjean_gfadi/#!/recipeInformation?id={{$ctrl.CompleteRecipeList[0].id}}" />
         <option value="{{r.title}}">
         </a>
       </div>
