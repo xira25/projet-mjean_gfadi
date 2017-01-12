@@ -1,9 +1,9 @@
 body {
   /* link pour la version deploy*/
-  background-image: url('styles/images/kitchen-background.jpg');
+  background-image: url('images/kitchenbackground.jpg');
   /*
   link pour la version local
-  background-image: url('images/kitchen-background.jpg');
+  background-image: url('images/kitchenbackground.jpg');
   */
 }
 
