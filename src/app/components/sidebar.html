@@ -24,9 +24,19 @@
   <div class="suggestion">
     <img class="img-responsive" src="{{n.image}}" />
     <div class="recContent">
-      <a href="recipeInformation?id={{n.id}}" alt="Go to full description" style="font-weight: bold; font-size: 10pt;"><p>{{n.title}}</p></a>
-      <p>&#8986 Preparation time : {{n.preparationMinutes}}min </p>
-      <p>&#8986 Cooking time : {{n.cookingMinutes}}min</p>
+      <a ng-href="/recipeInformation?id={{n.id}}" alt="Go to full description" style="font-weight: bold; font-size: 10pt;"><p>{{n.title}}</p></a>
+      <div ng-if="n.cookingMinutes===undefined">
+        <p>&#8986 Cooking time : -</p>
+      </div>
+      <div ng-if="n.cookingMinutes!==undefined">
+        <p>&#8986 Cooking time : {{n.cookingMinutes}}min</p>
+      </div>
+      <div ng-if="n.preparationMinutes===undefined">
+        <p>&#8986 Preparation time : -</p>
+      </div>
+      <div ng-if="n.preparationMinutes!==undefined">
+        <p>&#8986 Preparation time : {{n.preparationMinutes}}min</p>
+      </div>
       <p>&#128077 Likes : {{n.aggregateLikes}} </p>
     </div>
   </div>

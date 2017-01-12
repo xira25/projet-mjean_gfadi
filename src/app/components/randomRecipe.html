@@ -1,7 +1,7 @@
 <div class="suggestion">
   <img class="img-responsive" src="{{$ctrl.randomRecipeImage}}" />
   <div class="recContent">
-    <a href="selectedRecipe" alt="Go to full description" style="font-weight: bold;"><p>{{$ctrl.randomRecipeName}}</p></a> <!--Link is to be done, we can use the recipe ID to display it on another page-->
+    <a ui-sref="selectedRecipe" alt="Go to full description" style="font-weight: bold;"><p>{{$ctrl.randomRecipeName}}</p></a> <!--Link is to be done, we can use the recipe ID to display it on another page-->
     <p>&#8986 Preparation time : {{$ctrl.randomRecipeCookingTime}}min </p>
     <p>&#8986 Cooking time : {{$ctrl.randomRecipePreparationTime}}min</p>
     <p>Likes : {{ $ctrl.randomRecipeLikes }} &#128077</p>

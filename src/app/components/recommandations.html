@@ -1,21 +1,28 @@
-<h2 class=title2>&#127860 Recommandations &#127860</h2>
-
-<div class="row">
-  <br />
-  <div class="col-md-3" ng-repeat="n in $ctrl.randomRecipes">
-    <div class="suggestion">
-      <img class="img-responsive" style="width: 266px; height: 250px;"src="{{n.image}}" />
-      <div class="recContent">
+<h2 class="recommandationTitle">&#127860 Recommandations &#127860</h2>
+<br />
+<div class="col-md-3" ng-repeat="n in $ctrl.randomRecipes">
+  <div class="suggestion">
+    <img class="img-responsive" style="width: 266px; height: 250px;"src="{{n.image}}" /> <!--Le formatage de l'image pour que l'affichage soit correct-->
+    <div class="recContent">
       <div class="recContentText">
         <!-- contient le paramètre qui sera transmis au service "DataExtract" qui va récupérer les détails de la recette -->
-        <a href="recipeInformation?id={{n.id}}" alt="Go to full description" style="font-weight: bold;"><p style="font-size: 10pt;max-width: 200px">{{n.title}}</p></a>
+        <a ng-href="/recipeInformation?id={{n.id}}" alt="Go to full description" style="font-weight: bold;"><p style="font-size: 10pt;max-width: 200px">{{n.title}}</p></a>
       </div>
-
-        <p>&#8986 Preparation time (min) : {{n.preparationMinutes}}</p>
-        <p>&#8986 Cooking time (min) : {{n.cookingMinutes}}</p>
-        <p>Likes : {{n.aggregateLikes}} &#128077</p>
+      <div ng-if="n.cookingMinutes===undefined">
+        <p>&#8986 Cooking time : -</p>
       </div>
+      <div ng-if="n.cookingMinutes!==undefined">
+        <p>&#8986 Cooking time : {{n.cookingMinutes}}min</p>
+      </div>
+      <div ng-if="n.preparationMinutes===undefined">
+        <p>&#8986 Preparation time : -</p>
+      </div>
+      <div ng-if="n.preparationMinutes!==undefined">
+        <p>&#8986 Preparation time : {{n.preparationMinutes}}min</p>
+      </div>
+      <p>Likes : {{n.aggregateLikes}} &#128077</p>
     </div>
+  </div>
 </div>
 
 

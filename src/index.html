@@ -8,8 +8,7 @@
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width">
   <link rel="icon" type="image/png" href="images/faviconLeCook.png" />
-
-  <!-- build:css({.tmp,src}) styles/vendor.css -->
+    <!-- build:css({.tmp,src}) styles/vendor.css -->
   <link rel="stylesheet" href="bower_components/bootswatch/readable/bootstrap.css" />
   <!-- bower:css -->
   <!-- run `gulp inject` to automatically populate bower styles dependencies -->
@@ -35,15 +34,15 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="home">Home</a>
+        <a class="navbar-brand" ui-sref="home">Home</a>
       </div>
 
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
-          <li><a href="/myfridge">My fridge <span class="sr-only"></span></a></li>
-          <li><a href="/recommandations">Recommandations</a></li>
-          <li><a href="/advancedsearch">Advanced search</a></li>
+          <li><a ui-sref="myfridge">My fridge <span class="sr-only"></span></a></li>
+          <li><a ui-sref="recommandations">Recommandations</a></li>
+          <li><a ui-sref="advancedsearch">Advanced search</a></li>
         </ul>
 
         <div>

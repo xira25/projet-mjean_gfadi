@@ -21,4 +21,3 @@ angular
     templateUrl: 'app/components/searchField.html',
     controller: searchFieldController
   });
-

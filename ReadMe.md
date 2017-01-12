@@ -23,7 +23,7 @@ Le design du site quant à lui à évoluer au fur et à mesure.
 
 ##APIs utilisées
 * ![angularjs](https://angularjs.org/): au coeur du projet, permet de faire une webApp en ![SPA](https://en.wikipedia.org/wiki/Single-page_application) en utilisant une architecture ![MVC](https://openclassrooms.com/courses/apprenez-a-programmer-en-java/mieux-structurer-son-code-le-pattern-mvc).
-* ![Food - Nutrition - Recipe API](url SANS CLEF !!!!/): notre base de données, nous fournit également tout un tas de méthodes liés aux recettes et à leurs ingrédients ! (Clef académique obtenu via une demande sur https://market.mashape.com)
+* ![Food - Nutrition - Recipe API](https://market.mashape.com/spoonacular/recipe-food-nutrition): notre base de données, nous fournit également tout un tas de méthodes liés aux recettes et à leurs ingrédients ! (Clef académique obtenu via une demande sur https://market.mashape.com)
 * ![Bootstrap](http://www.w3schools.com/bootstrap/): framework permettant de rendre son site responsive (fait que l'application correspondent à la taille de l'écran de l'utilisateur) en faisant des appels spécicifiques à ses scripts css.
 * ![Bootswatch](https://bootswatch.com/): thèmes gratuits pour Bootstrap. (slate???)
 * ![Firebase](https://firebase.google.com/docs/auth/): Pour la partie persistence des données / authentification.

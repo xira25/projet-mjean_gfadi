@@ -96,6 +96,7 @@
     "bower": "bower"
   },
   "dependencies": {
+    "angular-sanitize": "^1.6.0",
     "bootswatch": "^3.3.7"
   }
 }
