@@ -1,5 +1,6 @@
 function recipeInformationController($scope, $location, DataExtract, $stateParams) {
   var $ctrl = this;
+  this.text = 't<span>g</span>';
 
   // Lien entre la valeur retourné par le service DataExtract et ce que l'on va afficher dans la vue.
   DataExtract.getRecipeById($stateParams.id).then(function (recipeById) {
@@ -16,6 +17,7 @@ function recipeInformationController($scope, $location, DataExtract, $stateParam
     $ctrl.recipeByIdGlutenFree = recipeById.data.glutenFree;
     $ctrl.recipeByIdCheap = recipeById.data.cheap;
     $ctrl.recipeByIdInstructions = recipeById.data.instructions;
+    $ctrl.recipeByIdId = recipeById.data.id;
   });
 }
 

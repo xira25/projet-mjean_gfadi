@@ -9,7 +9,6 @@ body,html{
 /*
   Navbar
 */
-
   nav.sidebar, .main{
     -webkit-transition: margin 200ms ease-out;
       -moz-transition: margin 200ms ease-out;
@@ -195,6 +194,7 @@ body{
   background: rgb(164, 169, 244);
   background: rgba(164, 169, 244, 0.4);
   padding : 10px;
+  font-family: "Kalinga", Georgia, Serif;
 }
 
 h1{
@@ -212,10 +212,17 @@ h3{
 }
 
 p {
-    font-family: "Kalinga", Georgia, Serif;
+  font-family: "Kalinga", Georgia, Serif;
 }
 
 .recommandationTitle{
   font-family: "Kalinga", Georgia, Serif;
   text-align: center;
+}
+
+#imgRecipeInfo{
+  margin:0 auto;  
+  max-width: 100%; 
+  max-height: 400px; 
+  border-radius: 15px;
 }
