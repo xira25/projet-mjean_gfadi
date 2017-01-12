@@ -34,7 +34,7 @@ function DataExtract($http) {
   $ctrl.getRandomRecipe = function getRandomRecipe() {
     return $http({
       method: 'GET',
-      url: 'https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/random?limitLicense=false&number=3&mashape-key=4PTOBxUqKhmshG0KYCigfNqnZySvp1U6PpGjsnmmcY6n4o12Kp'
+      url: 'https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/random?limitLicense=false&number=2&mashape-key=4PTOBxUqKhmshG0KYCigfNqnZySvp1U6PpGjsnmmcY6n4o12Kp'
     }).then(function successCallback(response) {
       return response;
     }, function errorCallback() {
@@ -94,7 +94,7 @@ function DataExtract($http) {
   $ctrl.getRecipeByIngredient = function getRecipeByIngredient(searchQuery) {
     return $http({
       method: 'GET',
-      url: 'https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/search?number=10&offset=0&query=' + searchQuery + '&mashape-key=4PTOBxUqKhmshG0KYCigfNqnZySvp1U6PpGjsnmmcY6n4o12Kp'
+      url: 'https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/findByIngredients?fillIngredients=false&ingredients=' + searchQuery + '&limitLicense=false&number=4&ranking=2&mashape-key=4PTOBxUqKhmshG0KYCigfNqnZySvp1U6PpGjsnmmcY6n4o12Kp'
     }).then(function successCallback(response) {
       return response;
     }, function errorCallback() {

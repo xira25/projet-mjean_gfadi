@@ -1,5 +1,4 @@
 <h2 class="title2">&#10054 My Fridge &#10054</h2>
-<h2> {{$ctrl.text}} </h2>
 <!-- Barre de recherche dédié aux ingrédients -->
 
 <form class="navbar-form navbar-left">
@@ -11,6 +10,45 @@
         <option value="{{r.name}}">
       </div>
     </datalist>
+    <button type="submit" ng-click="$ctrl.addIngredient()">Add</button>
 
-    <button type="submit" class="btn btn-default">search</button>
+    <div>
+      <ul>
+        <br/>
+        <li ng-repeat="e in $ctrl.getIngredients() | orderBy: 'name' track by $index">
+          {{e}} <button ng-click="$ctrl.remove(e)" type="deleteBox">remove</button>
+        </li>
+      </ul>
+    </div>
+
+    <div>
+      <button ng-click="$ctrl.getRecipeByIngredient($ctrl.getIngredients())"> Cook Something ! </button>
+      <div>
+        <div class="col-md-3" ng-repeat="n in $ctrl.RecipeByIngredient">
+          <div class="suggestion">
+            <img class="img-responsive" style="width: 266px; height: 250px;"src="{{n.image}}" />
+<!--Le formatage de l'image pour que l'affichage soit correct-->
+<div class="recContent">
+  <div class="recContentText">
+    <!-- contient le paramètre qui sera transmis au service "DataExtract" qui va récupérer les détails de la recette -->
+    <!-- version local ng-href="recipeInformation?id={{n.id}}" -->
+    <!-- version deploy ng-href="/projet-mjean_gfadi/#!/recipeInformation?id={{n.id}}" -->
+    <a ng-href="recipeInformation?id={{n.id}}" alt="Go to full description" style="font-weight: bold;">
+      <p style="font-size: 10pt;max-width: 200px">{{n.title}}</p>
+    </a>
+  </div>
+
+  <div>
+    <p>&#8986 Used ingredient: {{n.usedIngredientCount}}</p>
+  </div>
+  <div ng-if="n.missedIngredientCount===undefined">
+    <p>&#8986 Missed ingredient : -</p>
+  </div>
+  <div ng-if="n.missedIngredientCount!==undefined">
+    <p>&#8986 Missed ingredient : {{n.missedIngredientCount}}</p>
+  </div>
+  <div>
+    <p>Likes : {{n.likes}} &#128077</p>
+  </div>
+</div>
 </form>
