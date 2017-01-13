@@ -2,11 +2,11 @@ body {
   /* link pour la version deploy
   background-image: url("http://andifurniture.com/wp-content/uploads/2015/09/kitchen-counter-background-7pevkom7i.jpg");
   */
-  background-image: url('images/kitchenbackground.jpg');
   /*
   link pour la version local
   background-image: url('images/kitchenbackground.jpg');
   */
+  background-image: url("http://andifurniture.com/wp-content/uploads/2015/09/kitchen-counter-background-7pevkom7i.jpg");
 }
 
 body,html{
