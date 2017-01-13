@@ -8,16 +8,16 @@ Une partie de la webApp est consacré à la gestion du frigo (des ingrédients) 
 de consulter les recettes appropriées à ce qu'il a dans son frigo.
   
 ##Maquette de base
-![index](http://image.noelshack.com/fichiers/2017/02/1484330935-indexhtmlandhome.jpg)
-![myFridge](http://image.noelshack.com/fichiers/2017/02/1484330884-myfridgehtml.jpg)
+![index](http://img15.hostingpics.net/pics/567147indexHtml.png)
+![myFridge](http://img15.hostingpics.net/pics/959436myFridge.png)
+![RecipeInfo](http://img15.hostingpics.net/pics/495703RecipeInfo.png)
 ![LogoCacoo](http://img11.hostingpics.net/pics/118836MaquetteHome.png)
-![RecipeInfo](http://image.noelshack.com/fichiers/2017/02/1484330929-recipeinfohtml.jpg)
 
 Elles représente une partie des fonctionnalités que nous proposons. Le design ne doit pas être regardé, ces maquettes sont ici uniquement pour comprendre et voir les fonctionnalités disponibles.
 Le design du site quant à lui à évoluer au fur et à mesure.
 
 ##Architecture de l'application
-![Architecture](http://image.noelshack.com/fichiers/2017/02/1484330930-architecture.jpg)
+![Architecture](http://img15.hostingpics.net/pics/755644Architecture.png)
 
 ##APIs utilisées
 * [angularjs](https://angularjs.org/): au coeur du projet, permet de faire une webApp en [SPA](https://en.wikipedia.org/wiki/Single-page_application) en utilisant une architecture ![MVC](https://openclassrooms.com/courses/apprenez-a-programmer-en-java/mieux-structurer-son-code-le-pattern-mvc).
@@ -49,13 +49,10 @@ Le design du site quant à lui à évoluer au fur et à mesure.
 * Ajout des ingrédients via scan de la liste de course
 
 ###Conclusions personnelles
-Fadi: 
-J'ai appris le pattern MVC en apprenant Java, c'est marrant de le revoir en web, finalement c'est vraiment pratique ! Comme on s'y attendait, énormément de haut et de bas en utilisant angularjs.
+Fadi: <br/> J'ai appris le pattern MVC en apprenant Java, c'est marrant de le revoir en web, finalement c'est vraiment pratique ! Comme on s'y attendait, énormément de haut et de bas en utilisant angularjs.
 (Comme montré sur les slides d'angularJS Zero-to-Hero part1). J'ai été frustré par le rapport avancement du projet / temps. 
 En effet, nous avons passé presque 2 jours de suite à travailler en avançant trop peu (ON regardait beaucoup la documentation avant de vraiment comprendre l'architecture que nous devions utilisé). 
 Par contre travailler avec angularjs (MVC web, séparation des couches en module, composants/vues) devient de plus en plus intéressant au fil du temps, c'est un outil que je réutiliserais volontiers.
-<br/>
-Jean:
-Je pense avoir beaucoup appris lors de ce projet. Au tout début, c'était très abstrait pour moi mais à un certain moment, il y a eu un déclick et j'approuve le fait qu'Angular est un excellent framework.
+<br/> Jean: <br/> Je pense avoir beaucoup appris lors de ce projet. Au tout début, c'était très abstrait pour moi mais à un certain moment, il y a eu un déclick et j'approuve le fait qu'Angular est un excellent framework.
 Le fait d'avoir communiqué avec les fondateurs de l'API que nous utilisons a aussi été un moyen de me forcer à rendre un résultat présentable. A la suite de ce projet, je m'intéresse bien plus au web qu'avant. Je dirais même que c'est le domaine dans lequel je me sens le plus libre.
-Comme vu en classe, la courbe de progression de notre projet ressemblait à celle vue en classe. Des hauts, des bas, mais au final nous somme satisfaits.
+La courbe de progression de notre projet ressemblait à celle vue en classe. Des hauts, des bas, mais au final nous somme satisfaits.
