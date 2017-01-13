@@ -43,17 +43,19 @@
               </div>
               <!-- Attributs autre que boolean mais récupérer de la même manière-->
               <li>Servings (portions) : {{$ctrl.recipeByIdServings}}</li>
+              
               <div ng-if="$ctrl.recipeByIdCookingTime===undefined">
                 <li>Cooking time : -</li>
               </div>
               <div ng-if="$ctrl.recipeByIdCookingTime!==undefined">
                 <li>Cooking time : {{$ctrl.recipeByIdCookingTime}}min</li>
               </div>
+
               <div ng-if="$ctrl.recipeByIdPreparationTime===undefined">
                 <li>Preparation time : -</li>
               </div>
               <div ng-if="$ctrl.recipeByIdPreparationTime!==undefined">
-                <li>Preparation time : {{$$ctrl.recipeByIdPreparationTime}}min</li>
+                <li>Preparation time : {{$ctrl.recipeByIdPreparationTime}}min</li>
               </div>
             </ul>
           </div>
