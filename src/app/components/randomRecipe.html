@@ -1,5 +1,5 @@
 <div class="suggestion">
-  <img class="img-responsive" src="{{$ctrl.randomRecipeImage}}" />
+  <img class="img-responsive" ng-src="{{$ctrl.randomRecipeImage}}" />
   <div class="recContent">
     <a ui-sref="selectedRecipe" alt="Go to full description" style="font-weight: bold;"><p>{{$ctrl.randomRecipeName}}</p></a> <!--Link is to be done, we can use the recipe ID to display it on another page-->
     <p>&#8986 Preparation time : {{$ctrl.randomRecipeCookingTime}}min </p>

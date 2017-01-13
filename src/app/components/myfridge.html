@@ -20,7 +20,7 @@
             <ul>            
               <li ng-repeat="e in $ctrl.getIngredients() | orderBy: 'name' track by $index">
                 <button class="deleteButton" ng-click="$ctrl.remove(e)" type="deleteBox">       
-                  <img class="img-responsive" id="buttonImg" src="images/wastebasket.png" />
+                  <img class="img-responsive" id="buttonImg" ng-src="images/wastebasket.png" />
                 </button>   {{e}} 
               </li>
             </ul>
@@ -33,19 +33,19 @@
         </form>
       </div>
       <div class="col-md-6">
-        <img class="img-responsive" src="images/fridge.png" />
+        <img class="img-responsive" ng-src="images/fridge.png" />
       </div>
       <div class="row">
         <div class="col-md-3" ng-repeat="n in $ctrl.RecipeByIngredient">
           <div class="suggestion">
-            <img class="img-responsive" style="width: 266px; height: 250px;"src="{{n.image}}" />
+            <img class="img-responsive" style="width: 266px; height: 250px;" ng-src="{{n.image}}" />
             <!--Le formatage de l'image pour que l'affichage soit correct-->
             <div class="recContent">
               <div class="recContentText">
                 <!-- contient le paramètre qui sera transmis au service "DataExtract" qui va récupérer les détails de la recette -->
                 <!-- version local ng-href="recipeInformation?id={{n.id}}" -->
                 <!-- version deploy ng-href="/projet-mjean_gfadi/#!/recipeInformation?id={{n.id}}" -->
-                <a ng-href="recipeInformation?id={{n.id}}" alt="Go to full description" style="font-weight: bold;">
+                <a ng-href="/projet-mjean_gfadi/#!/recipeInformation?id={{n.id}}" alt="Go to full description" style="font-weight: bold;">
                   <p style="font-size: 10pt;max-width: 200px">{{n.title}}</p>
                 </a>
               </div>

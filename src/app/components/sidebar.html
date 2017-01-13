@@ -1,4 +1,4 @@
-<img class="img-responsive" src="images/LeCookLogo.png" />
+<img class="img-responsive" ng-src="images/LeCookLogo.png" />
 
 
 <p style="font-size : 11pt; font-weight : bold; color : #191e2d;">The refence cooking site</p>
@@ -22,11 +22,11 @@
 <!-- Pour afficher des recettes dans la sidebar, ici href redirige l'utilisateur vers les détails de la recette -->
 <div ng-repeat="n in $ctrl.randomRecipes">
   <div class="suggestion">
-    <img class="img-responsive" src="{{n.image}}" />
+    <img class="img-responsive" ng-src="{{n.image}}" />
     <div class="recContent">
       <!-- version local ng-href="/recipeInformation?id={{n.id}}" --> 
       <!-- version deploy ng-href="/projet-mjean_gfadi/#!/recipeInformation?id={{n.id}}" -->
-      <a ng-href="recipeInformation?id={{n.id}}" alt="Go to full description" style="font-weight: bold; font-size: 10pt;"><p>{{n.title}}</p></a>
+      <a ng-href="/projet-mjean_gfadi/#!/recipeInformation?id={{n.id}}" alt="Go to full description" style="font-weight: bold; font-size: 10pt;"><p>{{n.title}}</p></a>
       <div ng-if="n.cookingMinutes===undefined">
         <p>&#8986 Cooking time : -</p>
       </div>
