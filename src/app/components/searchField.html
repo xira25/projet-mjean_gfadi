@@ -1,12 +1,14 @@
 <form class="navbar-form navbar-left">
   <div class="form-group">
-    <input ng-model-options="{ debounce: 800 }" ng-model="recipe" type="text" class="form-control" placeholder="Search for a recipe"
+    <input ng-model-options="{ debounce: 200 }" ng-model="recipe" type="text" class="form-control" placeholder="Search for a recipe"
       list="RecipeQuery">
     <datalist id="RecipeQuery">
 
       <div ng-repeat="r in $ctrl.CompleteRecipeList">
         <!-- [0] pour obtenir la première recette (la plus cohérente en général) -->
-        <a href="recipeInformation?id={{$ctrl.CompleteRecipeList[0].id}}" />
+        <!-- version local ng-href="recipeInformation?id={{$ctrl.CompleteRecipeList[0].id}}" -->
+        <!-- version deploy ng-href="/projet-mjean_gfadi/#!/recipeInformation?id={{$ctrl.CompleteRecipeList[0].id}}" -->
+        <a ng-href="recipeInformation?id={{$ctrl.CompleteRecipeList[0].id}}" />
         <option value="{{r.title}}">
         </a>
       </div>

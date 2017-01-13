@@ -1,5 +1,12 @@
 body {
-  background-image: url('images/kitchen-background.jpg');
+  /* link pour la version deploy
+  background-image: url("http://andifurniture.com/wp-content/uploads/2015/09/kitchen-counter-background-7pevkom7i.jpg");
+  */
+  background-image: url('images/kitchenbackground.jpg');
+  /*
+  link pour la version local
+  background-image: url('images/kitchenbackground.jpg');
+  */
 }
 
 body,html{
@@ -243,10 +250,10 @@ p {
   background-image: linear-gradient(to bottom, #3498db, #2980b9);
   -webkit-border-radius: 9;
   -moz-border-radius: 9;
-  border-radius: 9px;
+  border-radius: 5px;
   font-family: Courier New;
   color: #ffffff;
-  font-size: 20px;
+  font-size: 15px;
   text-decoration: none;
 }
 
@@ -256,6 +263,11 @@ p {
 }
 
 #buttonImg{
-  height: 20px;
-  width: 20px;
+  height: 15px;
+  width: 15px;
 }
+
+.listMyFride{
+  list-style-type: none;
+}
+

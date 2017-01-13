@@ -1,7 +1,3 @@
-<div ng-if="$ctrl.recipeByIdId===undefined">
-  <h4> Sorry, no recipe with this tag has been found :( </h4>
-</div>
-
 <div ng-if="$ctrl.recipeByIdId!==undefined">
   <div class="container-fluid">
     <div class="receipe prez">
@@ -9,8 +5,9 @@
         <div class="col-md-8">
           <br />
           <!-- source url récupérer et afficher depuis un des attributs de la recette  -->
-          <img class="img-responsive" id="imgRecipeInfo" src="{{$ctrl.recipeByIdImage}}"/>
+          <img class="img-responsive" id="imgRecipeInfo" src="{{$ctrl.recipeByIdImage}}" />
         </div>
+
         <div class="col-md-4">
           <h2>{{$ctrl.recipeByIdName}}</h2>
           <h3>About : </h3>
@@ -59,16 +56,17 @@
               </div>
             </ul>
           </div>
-        
-          <h3 class="title3">Ingredients<h3>
-          <div class="moreInfo">
-            <ul class="ingrlist">
-              <!-- Liste des ingrédients récupérer depuis un attribut "Array" de la recette (permet la directive ng-repeat) -->
-              <div ng-repeat="ingredient in $ctrl.recipeByIdIngredients">
-                <li>{{ingredient.originalString}}</li>
+
+          <h3 class="title3">Ingredients
+            <h3>
+              <div class="moreInfo">
+                <ul class="ingrlist">
+                  <!-- Liste des ingrédients récupérer depuis un attribut "Array" de la recette (permet la directive ng-repeat) -->
+                  <div ng-repeat="ingredient in $ctrl.recipeByIdIngredients">
+                    <li>{{ingredient.originalString}}</li>
+                  </div>
+                </ul>
               </div>
-            </ul>
-          </div>
         </div>
       </div>
       <h3 class="title3">Instructions</h3>
@@ -80,4 +78,10 @@
       </div>
     </div>
   </div>
+</div>
+
+<div ng-if="$ctrl.recipeByIdId===undefined">
+  <h3>
+    (╯°□°)╯︵ ┻━ Sorry, no recipe with this tag has been found ! ━┻ ︵ ╯(°□° ╯)
+  </h3>
 </div>
