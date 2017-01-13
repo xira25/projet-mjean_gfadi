@@ -18,7 +18,7 @@
           <div>
           <h3>What's in my fridge : </h3>
             <ul>            
-              <li class="listMyFride"ng-repeat="e in $ctrl.getIngredients() | orderBy: 'name' track by $index">
+              <li ng-repeat="e in $ctrl.getIngredients() | orderBy: 'name' track by $index">
                 <button class="deleteButton" ng-click="$ctrl.remove(e)" type="deleteBox">       
                   <img class="img-responsive" id="buttonImg" src="images/wastebasket.png" />
                 </button>   {{e}} 
