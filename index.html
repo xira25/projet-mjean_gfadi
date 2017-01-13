@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+
+<head>
+  <!-- <base href="/projet-mjean_gfadi"> -->
+  <!-- <base href="/"> version local -->
+  <base href="/projet-mjean_gfadi">
+  <meta charset="utf-8">
+  <title>LeCook</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width">
+  <link rel="icon" type="image/png" href="images/faviconLeCook.png">
+  <link rel="stylesheet" href="styles/vendor-cb25b37528.css">
+
+  <link rel="stylesheet" href="styles/app-a643bd8597.css">
+</head>
+
+<body ng-app="app">
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" ui-sref="home">Home</a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li><a ui-sref="myfridge">My fridge <span class="sr-only"></span></a></li>
+          <li><a ui-sref="recommandations">Recommandations</a></li>
+        </ul>
+
+        <div>
+          <!-- this contains our searchField component -->
+          <search-field></search-field>
+        </div>
+
+
+      </div>
+      <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+  </nav>
+
+  <div class="container-fluid">
+    <div class="row" id="row1">
+      <div class="col-md-2" id="leftmenu">
+        <!-- Same as searchField, but contains our left part -->
+        <sidebar></sidebar>
+      </div>
+      <div class="col-md-10">
+        <ui-view></ui-view>
+      </div>
+    </div>
+  </div>
+  <div id="footer">
+    <div class="container">
+      
+      <p> <img ng-src="images/faviconLeCook.png" alt="logo" style="height:20px; width:20px"> leCook - Projet Web - He-Arc</p>
+    </div>
+  </div>
+
+</body>
+
+<script src="scripts/vendor-f39ade11a1.js"></script>
+
+<script src="scripts/app-3a03119c22.js"></script>
+
+</html>
