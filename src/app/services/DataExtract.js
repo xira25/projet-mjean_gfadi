@@ -8,10 +8,8 @@ function DataExtract($http) {
       method: 'GET',
       url: 'https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/food/jokes/random?mashape-key=4PTOBxUqKhmshG0KYCigfNqnZySvp1U6PpGjsnmmcY6n4o12Kp'
     }).then(function successCallback(response) {
-      // $ctrl.joke = response.data.text;
       return response.data.text;
     }, function errorCallback() {
-      // $ctrl.joke = ;
       return 'Erreur lors du call';
     });
   };
@@ -22,15 +20,13 @@ function DataExtract($http) {
       method: 'GET',
       url: 'https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/food/trivia/random?mashape-key=4PTOBxUqKhmshG0KYCigfNqnZySvp1U6PpGjsnmmcY6n4o12Kp'
     }).then(function successCallback(response) {
-      // $ctrl.joke = response.data.text;
       return response.data.text;
     }, function errorCallback() {
-      // $ctrl.joke = ;
       return 'Erreur lors du call';
     });
   };
 
-  // permet de récupérer une recette aléatoire
+  // Permet de récupérer une recette aléatoire
   $ctrl.getRandomRecipe = function getRandomRecipe() {
     return $http({
       method: 'GET',
@@ -66,7 +62,7 @@ function DataExtract($http) {
     });
   };
 
-  // liste de recette dépendant de la recherche (limit 10)
+  // Liste de recette dépendant de la recherche (limit 10)
   $ctrl.getRecipeListWithQuery = function getRecipeListWithQuery(searchQuery) {
     return $http({
       method: 'GET',
@@ -90,7 +86,7 @@ function DataExtract($http) {
     });
   };
 
-  // liste de recettes par rapport aux ingrédients dans le frigo
+  // Liste de recettes par rapport aux ingrédients dans le frigo
   $ctrl.getRecipeByIngredient = function getRecipeByIngredient(searchQuery) {
     return $http({
       method: 'GET',

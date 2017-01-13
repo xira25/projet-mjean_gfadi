@@ -33,12 +33,6 @@ function routesConfig($stateProvider, $urlRouterProvider, $locationProvider) {
     });
 
   $stateProvider
-    .state('advancedsearch', {
-      url: '/advancedsearch',
-      component: 'advancedsearch'
-    });
-
-  $stateProvider
     .state('searchresults', {
       url: '/searchresults',
       component: 'searchresults'

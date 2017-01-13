@@ -1,6 +1,7 @@
 function searchFieldController($timeout, DataExtract, $scope) {
   var $ctrl = this;
 
+// Récupère les informations liés à la recette selon ce que l'user à écrit ($scope.search)
   $ctrl.getRecipesQuery = function () {
     DataExtract.getRecipeListWithQuery($scope.recipe).then(function (autoRecipe) {
       $ctrl.text = $scope.search;
@@ -10,6 +11,7 @@ function searchFieldController($timeout, DataExtract, $scope) {
     });
   };
 
+// Surveille les changements effectués au sein de la search Box (link au model option de la searchBox)
   $scope.$watch('recipe', function () {
     $ctrl.getRecipesQuery();
   });

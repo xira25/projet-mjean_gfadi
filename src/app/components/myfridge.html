@@ -1,51 +1,56 @@
 <div class="container-fluid">
-  <h2 class="recommandationTitle">&#10054 My Fridge &#10054</h2>
+  <h2 class="recommandationTitle">&#10054; My Fridge &#10054;</h2>
   <!-- Barre de recherche dédié aux ingrédients -->
-
   <div class="row">
     <div class="col-md-6">
       <h3>Add ingredients to your fridge</h3>
       <form class="navbar-form navbar-left">
         <div class="form-group">
+          <!-- On limite l'appel de requete à 200 ms via ng-model-options (lors du dev à 800)--> 
           <input ng-model-options="{ debounce: 200 }" ng-model="search" type="text" class="form-control" placeholder="Search for an ingredient" list="IngredientQuery">
           <datalist id="IngredientQuery">
+          <!-- Affichage des ingrédients liée à ce qu'à écrit l'utilisateur -->
             <div ng-repeat="r in $ctrl.IngredientList">
               <option value="{{r.name}}">
             </div>
           </datalist>
+          <!-- Bouton pour ajouter un ingrédient (sera plus tard envoyé dans une arraylist pour la recherche de recettes liées-->
           <button type="submit" class="deleteButton" ng-click="$ctrl.addIngredient()">Add</button>
 
           <div>
           <h3>What's in my fridge : </h3>
             <ul>            
+              <!--  Affichage des ingredients, triées par nom --> 
+              <!--  Perspective d'amélioration :
+                    Ajout des attributs "Date de péremption" et "prix" -->
               <li ng-repeat="e in $ctrl.getIngredients() | orderBy: 'name' track by $index">
-                <button class="deleteButton" ng-click="$ctrl.remove(e)" type="deleteBox">       
-                  <img class="img-responsive" id="buttonImg" ng-src="images/wastebasket.png" />
+                <button class="deleteButton" ng-click="$ctrl.remove(e)" type="button">       
+                  <img class="img-responsive" id="buttonImg" ng-src="images/wastebasket.png" alt="junk" />
                 </button>   {{e}} 
               </li>
             </ul>
           </div>
-
           <div>
+            <!-- Pour supprimer un element dans la liste-->
             <button id="deBut" class="deleteButton" ng-click="$ctrl.getRecipeByIngredient($ctrl.getIngredients());"> Cook Something Chef ! </button>
           </div>
         </div>
         </form>
       </div>
       <div class="col-md-6">
-        <img class="img-responsive" ng-src="images/fridge.png" />
+        <img class="img-responsive" ng-src="images/fridge.png" alt="Your fridge!" />
       </div>
       <div class="row">
         <div class="col-md-3" ng-repeat="n in $ctrl.RecipeByIngredient">
           <div class="suggestion">
-            <img class="img-responsive" style="width: 266px; height: 250px;" ng-src="{{n.image}}" />
+            <img class="img-responsive" style="width: 266px; height: 250px;" ng-src="{{n.image}}" alt="Suggested Recipe" />
             <!--Le formatage de l'image pour que l'affichage soit correct-->
             <div class="recContent">
               <div class="recContentText">
-                <!-- contient le paramètre qui sera transmis au service "DataExtract" qui va récupérer les détails de la recette -->
+                <!-- Contient le paramètre qui sera transmis au service "DataExtract" qui va récupérer les détails de la recette -->
                 <!-- version local ng-href="recipeInformation?id={{n.id}}" -->
                 <!-- version deploy ng-href="/projet-mjean_gfadi/#!/recipeInformation?id={{n.id}}" -->
-                <a ng-href="/projet-mjean_gfadi/#!/recipeInformation?id={{n.id}}" alt="Go to full description" style="font-weight: bold;">
+                <a ng-href="/projet-mjean_gfadi/#!/recipeInformation?id={{n.id}}" style="font-weight: bold;">
                   <p style="font-size: 10pt;max-width: 200px">{{n.title}}</p>
                 </a>
               </div>
@@ -59,11 +64,11 @@
                 <p>Missed ingredient : {{n.missedIngredientCount}}</p>
               </div>
               <div>
-                <p>Likes : {{n.likes}} &#128077</p>
+                <p>Likes : {{n.likes}} &#128077;</p>
               </div>
             </div>
           </div>
         </div>
       </div>
-</div>
+  </div>
 </div>

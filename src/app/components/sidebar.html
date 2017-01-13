@@ -1,4 +1,4 @@
-<img class="img-responsive" ng-src="images/LeCookLogo.png" />
+<img class="img-responsive" ng-src="images/LeCookLogo.png" alt="logo" />
 
 
 <p style="font-size : 11pt; font-weight : bold; color : #191e2d;">The refence cooking site</p>
@@ -16,30 +16,29 @@
   <p style="font-weight: bold;">Food Fact</p>
   <p class="joke">"{{ $ctrl.foodTrivia }}"</p>
 </div>
-
 <br />
-
 <!-- Pour afficher des recettes dans la sidebar, ici href redirige l'utilisateur vers les détails de la recette -->
 <div ng-repeat="n in $ctrl.randomRecipes">
   <div class="suggestion">
-    <img class="img-responsive" ng-src="{{n.image}}" />
-    <div class="recContent">
+    <img id="imgRec" class="img-responsive" ng-src="{{n.image}}" alt="Suggested Recipe"/>
+    <div class="recContent1">
       <!-- version local ng-href="/recipeInformation?id={{n.id}}" --> 
       <!-- version deploy ng-href="/projet-mjean_gfadi/#!/recipeInformation?id={{n.id}}" -->
-      <a ng-href="/projet-mjean_gfadi/#!/recipeInformation?id={{n.id}}" alt="Go to full description" style="font-weight: bold; font-size: 10pt;"><p>{{n.title}}</p></a>
+      <a ng-href="/projet-mjean_gfadi/#!/recipeInformation?id={{n.id}}" style="font-weight: bold; font-size: 10pt;"><p>{{n.title}}</p></a>
+      <!-- On vérifie si l'API nous retourne aucune valeur, dans quel cas on affiche "-" -->
       <div ng-if="n.cookingMinutes===undefined">
-        <p>&#8986 Cooking time : -</p>
+        <p>&#8986; Cooking time : -</p>
       </div>
       <div ng-if="n.cookingMinutes!==undefined">
-        <p>&#8986 Cooking time : {{n.cookingMinutes}}min</p>
+        <p>&#8986; Cooking time : {{n.cookingMinutes}}min</p>
       </div>
       <div ng-if="n.preparationMinutes===undefined">
-        <p>&#8986 Preparation time : -</p>
+        <p>&#8986; Preparation time : -</p>
       </div>
       <div ng-if="n.preparationMinutes!==undefined">
-        <p>&#8986 Preparation time : {{n.preparationMinutes}}min</p>
+        <p>&#8986; Preparation time : {{n.preparationMinutes}}min</p>
       </div>
-      <p>&#128077 Likes : {{n.aggregateLikes}} </p>
+      <p>&#128077; Likes : {{n.aggregateLikes}} </p>
     </div>
   </div>
 </div>

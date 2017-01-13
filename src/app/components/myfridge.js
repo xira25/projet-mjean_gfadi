@@ -20,7 +20,7 @@ function myfridgeController($timeout, DataExtract, $scope) {
     return url + imgName;
   };
 
-  // donne la liste des ingrédients en paramètre, retourne une liste de recettes contenant ces ingrédients.
+  // Donne la liste des ingrédients en paramètre, retourne une liste de recettes contenant ces ingrédients.
   $ctrl.getRecipeByIngredient = function (ingredients) {
     DataExtract.getRecipeByIngredient(ingredients).then(function (RecipeByIngredient) {
       $ctrl.RecipeByIngredient = RecipeByIngredient.data;
@@ -29,6 +29,8 @@ function myfridgeController($timeout, DataExtract, $scope) {
 
   var MADB_KEY = 'maDB';
   var ingredients = angular.fromJson(localStorage.getItem(MADB_KEY)) || [];
+
+  // Les opérations Create / Delete des ingrédients est geré directement dans ce controlleur (pas besoin de service, on ne l'utilie qu'ici)
 
   $ctrl.addIngredient = function () {
     var addIngr = $scope.search;

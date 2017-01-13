@@ -1,4 +1,5 @@
 <form class="navbar-form navbar-left">
+  <!-- On limite l'appel de requete à 200 ms via ng-model-options (lors du dev à 800)--> 
   <input ng-model-options="{ debounce: 200 }" ng-model="recipe" type="text" class="form-control" placeholder="Search for a recipe"
     list="RecipeQuery">
   <datalist id="RecipeQuery">
@@ -6,27 +7,9 @@
       <!-- [0] pour obtenir la première recette (la plus cohérente en général) -->
       <!-- version local ng-href="recipeInformation?id={{$ctrl.CompleteRecipeList[0].id}}" -->
       <!-- version deploy ng-href="/projet-mjean_gfadi/#!/recipeInformation?id={{$ctrl.CompleteRecipeList[0].id}}" -->
-      <a ng-href="/projet-mjean_gfadi/#!/recipeInformation?id={{$ctrl.CompleteRecipeList[0].id}}" />
+      <a ng-href="/projet-mjean_gfadi/#!/recipeInformation?id={{$ctrl.CompleteRecipeList[0].id}}"/>
       <option value="{{r.title}}">
-        </a>
     </div>
   </datalist>
   <button type="submit" class="btn btn-default">Submit</button>
 </form>
-<!--
-<form class="navbar-form navbar-left">
-  <div class="form-group">
-    <input ng-model-options="{ debounce: 200 }" ng-model="recipe" type="text" class="form-control" placeholder="Search for a recipe"
-      list="RecipeQuery" />
-    <datalist id="RecipeQuery">
-      <div ng-repeat="r in $ctrl.CompleteRecipeList">
-        <a ng-href="recipeInformation?id={{$ctrl.CompleteRecipeList[0].id}}" />
-        <option value="{{r.title}}">
-          </a>
-      </div>
-    </datalist>
-    <button ng-click="recipeInformation?id={{$ctrl.CompleteRecipeList[0].id}}" type="submit" class="btn btn-default">Submit</button>
-  </div>
-</form>
-
--->

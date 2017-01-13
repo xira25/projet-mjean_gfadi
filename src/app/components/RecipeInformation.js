@@ -3,6 +3,7 @@ function recipeInformationController($scope, $location, DataExtract, $stateParam
   this.text = 't<span>g</span>';
 
   // Lien entre la valeur retourné par le service DataExtract et ce que l'on va afficher dans la vue.
+  // On récupère les arguments pour les utiliser dans les ng-ifs
   DataExtract.getRecipeById($stateParams.id).then(function (recipeById) {
     $ctrl.recipeByIdName = recipeById.data.title;
     $ctrl.recipeByIdImage = recipeById.data.image;
